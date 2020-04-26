@@ -1,0 +1,49 @@
+{
+  "name": "metrofarm",
+  "private": true,
+  "description": "back to nature",
+  "version": "0.1.0",
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "deploy": "npm run build && surge ./public",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+  },
+  "dependencies": {
+    "babel-plugin-styled-components": "^1.10.7",
+    "gatsby": "^2.20.3",
+    "gatsby-plugin-layout": "^1.1.23",
+    "gatsby-plugin-styled-components": "^3.1.20",
+    "gatsby-source-wordpress": "^3.2.2",
+    "pure-react-carousel": "^1.27.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-onclickoutside": "^6.9.0",
+    "styled-components": "^5.0.1",
+    "styled-system": "^5.1.5"
+  },
+  "devDependencies": {
+    "eslint-config-cleo-one": "^1.0.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-config-react-app": "^5.2.0",
+    "eslint-loader": "^2.1.1",
+    "eslint-plugin-import": "2.16.0",
+    "eslint-plugin-jsx-a11y": "6.2.1",
+    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-react-hooks": "^1.6.0",
+    "gatsby-plugin-resolve-src": "^2.0.0",
+    "prettier": "^1.19.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ozluy/gatsby-template"
+  },
+  "bugs": {
+    "url": "https://github.com/ozluy/gatsby-template/issues"
+  }
+}
