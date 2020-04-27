@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, Component } from 'react'
 import onClickOutside from 'react-onclickoutside'
 import { Link } from 'gatsby'
 import Container from 'components/Container'
@@ -10,7 +10,13 @@ import { Wrapper, Navbar, Logo, Burger, Nav, Piece } from './styled'
 import MetroFarmLogo from 'components/MetroFarmLogo'
 import theme from 'common/theme'
 
-const EnhancedNavBar = onClickOutside(props => <Navbar {...props} />)
+class NavBarComp extends Component {
+  render() {
+    return <Navbar {...this.props} />
+  }
+}
+
+const EnhancedNavBar = onClickOutside(NavBarComp)
 
 const Header = ({ pages }) => {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -38,8 +44,11 @@ const Header = ({ pages }) => {
           <Nav open={menuOpen}>
             {navigationList.map(({ title, url }) => (
               <Link
-              activeStyle={{ color: theme.colors.green }}
-               onClick={() => setMenuOpen(false)} key={title} to={url}>
+                activeStyle={{ color: theme.colors.green }}
+                onClick={() => setMenuOpen(false)}
+                key={title}
+                to={url}
+              >
                 {title}
               </Link>
             ))}

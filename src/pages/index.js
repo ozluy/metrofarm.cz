@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { navigate } from 'gatsby'
-import { DataContext } from 'layouts'
+
 import Container from 'components/Container'
 import styled, { css } from 'styled-components'
 import bannerSrc from '../../static/banners/banner-1.svg'
@@ -100,13 +100,7 @@ const MetroOffer = styled(Flex)`
 `
 
 const Home = () => {
-  const { pages } = useContext(DataContext)
-
-  const homePage = pages.filter(({ node }) => node.slug === 'index')[0]
-  if (!homePage) {
-    return null
-  }
-  const { content } = homePage.node
+ 
   return (
     <>
       <Container>

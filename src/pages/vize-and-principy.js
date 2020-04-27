@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { DataContext } from 'layouts'
+
 import Container from 'components/Container'
 import Button from 'components/Button'
 import {
@@ -33,12 +33,7 @@ export const Banner = styled(Div)`
 `
 
 const VizePricipy = () => {
-  const { pages } = useContext(DataContext)
-  const contact = pages.filter(({ node }) => node.slug === 'contact')[0]
-  if (!contact) {
-    return null
-  }
-  const { content } = contact.node
+ 
   return (
     <>
       <Container>

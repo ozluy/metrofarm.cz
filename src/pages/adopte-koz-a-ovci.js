@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { DataContext } from 'layouts'
+
 import Container from 'components/Container'
 import Button from 'components/Button'
 import {
@@ -26,12 +26,8 @@ const CustomImg = styled(Img)`
 `
 
 const AdopSheepOrGoat = () => {
-  const { pages } = useContext(DataContext)
-  const contact = pages.filter(({ node }) => node.slug === 'contact')[0]
-  if (!contact) {
-    return null
-  }
-  const { content } = contact.node
+ 
+
   return (
     <>
       <Section>
