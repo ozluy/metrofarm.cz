@@ -16,8 +16,22 @@ import {
 import bannerSrc from '../../static/banners/banner-2.svg'
 import listSrc from '../../static/list/zahonkova_listina.jpg'
 import stepanSrc from '../../static/fullscreen/stepan_riha.jpg'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import Gallery from 'components/Gallery'
+
+const CustomFlex = styled(Flex)`
+  flex-direction: row;
+
+  ${({ theme }) => css`
+    @media screen and (max-width: ${theme.breakpoints.lg}) {
+      flex-direction: column-reverse;
+
+      img {
+        display: none;
+      }
+    }
+  `}
+`
 
 export const Banner = styled(Div)`
   height: 100vh;
@@ -33,10 +47,20 @@ export const Banner = styled(Div)`
     right: 0;
     z-index: -1;
   }
+
+  ${({ theme }) => css`
+    @media screen and (max-width: ${theme.breakpoints.md}) {
+      height: auto;
+      padding-top: 70px;
+      > ${Img} {
+        top: 50%;
+        height: auto;
+      }
+    }
+  `}
 `
 
 const RentGarden = () => {
- 
   return (
     <>
       <Container>
@@ -71,7 +95,7 @@ const RentGarden = () => {
         <Container>
           <H1 textAlign="center">Vlastní záhonek</H1>
 
-          <Flex flexDirection="row">
+          <CustomFlex>
             <Div pr="60px">
               <H2>Základní členství obsahuje:</H2>
               <ul>
@@ -111,7 +135,7 @@ const RentGarden = () => {
               </Div>
             </Div>
             <Img height={{ lg: 800, md: 500 }} src={listSrc} />
-          </Flex>
+          </CustomFlex>
         </Container>
       </Section>
       <Img width="100%" src={stepanSrc} />

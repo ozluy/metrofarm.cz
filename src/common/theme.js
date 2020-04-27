@@ -1,12 +1,12 @@
 import { css } from 'styled-components'
 const breakpoints = {
-  md: '768px',
+  md: '991px',
   lg: '1400px',
 }
 const theme = {
   breakpoints,
   font: {
-    small: css`
+    mdall: css`
       font-size: 25px;
       font-family: 'Helvatica Regular', Arial, Sans-serif;
       line-height: 30px;
@@ -16,6 +16,10 @@ const theme = {
       @media screen and (max-width: ${breakpoints.lg}) {
         font-size: 16px;
         line-height: 24px;
+      }
+      @media screen and (max-width: ${breakpoints.md}) {
+        font-size: 12px;
+        line-height: 20px;
       }
     `,
     medium: css`
@@ -29,6 +33,11 @@ const theme = {
         font-size: 24px;
         line-height: 30px;
       }
+
+      @media screen and (max-width: ${breakpoints.md}) {
+        font-size: 16px;
+        line-height: 24px;
+      }
     `,
     large: css`
       font-size: 80px;
@@ -40,6 +49,11 @@ const theme = {
       @media screen and (max-width: ${breakpoints.lg}) {
         font-size: 36px;
         line-height: 40px;
+      }
+
+      @media screen and (max-width: ${breakpoints.md}) {
+        font-size: 24px;
+        line-height: 30px;
       }
     `,
   },

@@ -16,7 +16,7 @@ import listSrcOvce from '../../static/list/adopcni_listina_ovce.jpg'
 import listSrcKoza from '../../static/list/adopcni_listina_koza.jpg'
 import listSrcSlepice from '../../static/list/adopcni_listina_slepice.jpg'
 import listSrcZahonkova from '../../static/list/zahonkova_listina.jpg'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 const listOfOptions = [
   {
@@ -45,8 +45,35 @@ const listOfOptions = [
   },
 ]
 
+const CustomFlex = styled(Flex)`
+  background-color: ${({ theme }) => theme.colors.yellow};
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding-top: 80px;
+  flex-direction: row;
+
+  ${({ theme }) => css`
+    @media screen and (max-width: ${theme.breakpoints.lg}) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  `}
+`
+
+const ItemWrapper = styled(Div)`
+  text-align: center;
+  margin-bottom: 80px;
+  width: 50%;
+
+  ${({ theme }) => css`
+    @media screen and (max-width: ${theme.breakpoints.lg}) {
+      width: 95%;
+    }
+  `}
+`
+
 const HowItWorks = () => {
- 
   return (
     <>
       <Section>
@@ -83,15 +110,9 @@ const HowItWorks = () => {
           </Flex>
         </Container>
       </Section>
-      <Flex
-        bg="yellow"
-        id="how-to"
-        justifyContent="space-around"
-        flexWrap="wrap"
-        pt="80px"
-      >
+      <CustomFlex id="how-to">
         {listOfOptions.map(({ title, img, buttonText, desc }) => (
-          <Div key={title} textAlign="center" mb="80px" width="50%">
+          <ItemWrapper key={title}>
             <Pragraph>{title} </Pragraph>
             <Div mb="40px">
               <Span>{desc}</Span>
@@ -108,9 +129,9 @@ const HowItWorks = () => {
                 {buttonText}
               </Button>
             </Div>
-          </Div>
+          </ItemWrapper>
         ))}
-      </Flex>
+      </CustomFlex>
     </>
   )
 }

@@ -19,11 +19,38 @@ const sharedButtonStyle = css`
   background: transparent;
   border: none;
   outline: none;
+
+  ${({ theme }) => css`
+    @media screen and (max-width: ${theme.breakpoints.md}) {
+      svg {
+        height: 50px;
+        width: 50px;
+      }
+    }
+  `}
 `
 
 export const Wrapper = styled.div`
   position: relative;
   padding: 70px;
+
+  ${({ theme }) => css`
+    padding: 0;
+
+    padding: 40px 0;
+  `}
+
+  #img-sizer {
+    height: 600px;
+    width: 400px;
+
+    ${({ theme }) => css`
+      @media screen and (max-width: ${theme.breakpoints.md}) {
+        height: 375px;
+        width: 250px;
+      }
+    `}
+  }
 
   #buttonNext {
     ${sharedButtonStyle};
@@ -43,6 +70,12 @@ export const Wrapper = styled.div`
     display: flex;
     padding: 0 8px;
 
+    ${({ theme }) => css`
+      @media screen and (max-width: ${theme.breakpoints.md}) {
+       width: 250px;
+      }
+    `}
+
     button {
       height: 15px;
       padding: 0;
@@ -52,6 +85,13 @@ export const Wrapper = styled.div`
       border-radius: 50%;
       background-color: ${({ theme }) => theme.colors.white};
       border: solid 1px rgba(0, 0, 0, 0.1);
+
+      ${({ theme }) => css`
+        @media screen and (max-width: ${theme.breakpoints.md}) {
+          width: 10px;
+          height: 10px;
+        }
+      `}
 
       &.carousel__dot--selected {
         background-color: ${({ theme }) => theme.colors.green};
@@ -65,7 +105,7 @@ const Gallery = ({ listName = 'garden' }) => {
   return (
     <Wrapper>
       <H1 textAlign="center">Fotogalerie</H1>
-      <Div color="black" height="600px" width="400px" m="0 auto">
+      <Div color="black" m="0 auto" id="img-sizer">
         <CarouselProvider
           naturalSlideWidth={400}
           naturalSlideHeight={600}
@@ -76,7 +116,7 @@ const Gallery = ({ listName = 'garden' }) => {
           <Slider>
             {selectedList.map((imgSrc, index) => (
               <Slide style={{ height: 600 }} key={index} index={index}>
-                <Img height="600px" width="400px" src={imgSrc} />
+                <Img src={imgSrc} />
               </Slide>
             ))}
           </Slider>

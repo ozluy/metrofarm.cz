@@ -17,8 +17,23 @@ import listSrc from '../../static/list/adopcni_listina_slepice.jpg'
 import chickenSrc from '../../static/fullscreen/chicken.png'
 import Gallery from 'components/Gallery'
 
+import styled, { css } from 'styled-components'
+
+const CustomFlex = styled(Flex)`
+  flex-direction: row;
+
+  ${({ theme }) => css`
+    @media screen and (max-width: ${theme.breakpoints.lg}) {
+      flex-direction: column-reverse;
+
+      img {
+        display: none;
+      }
+    }
+  `}
+`
+
 const AdopChicken = () => {
- 
   return (
     <>
       <Section>
@@ -62,7 +77,7 @@ const AdopChicken = () => {
         <Container>
           <H1 textAlign="center">Adopce</H1>
 
-          <Flex flexDirection="row">
+          <CustomFlex>
             <Div pr="60px">
               <H2>Základní členství obsahuje:</H2>
               <ul>
@@ -99,7 +114,7 @@ const AdopChicken = () => {
               </Div>
             </Div>
             <Img height={{ lg: 800, md: 500 }} src={listSrc} />
-          </Flex>
+          </CustomFlex>
         </Container>
       </Section>
       <Gallery listName="chicken" />

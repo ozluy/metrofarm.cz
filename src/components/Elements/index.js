@@ -10,6 +10,7 @@ import {
   textAlign,
   flexbox,
   background,
+  position,
 } from 'styled-system'
 
 const shared = css`
@@ -22,6 +23,7 @@ const shared = css`
   ${color};
   ${textAlign};
   ${background};
+  ${position};
 
   ${({ textDecoration }) =>
     textDecoration &&
@@ -59,6 +61,19 @@ export const H2 = styled.h2`
   font-size: 60px;
   line-height: 70px;
   margin-top: 0;
+
+  ${({ theme }) => css`
+    @media screen and (max-width: ${theme.breakpoints.lg}) {
+      font-size: 32px;
+      line-height: 40px;
+    }
+  `}
+  ${({ theme }) => css`
+    @media screen and (max-width: ${theme.breakpoints.md}) {
+      font-size: 20px;
+      line-height: 30px;
+    }
+  `}
   ${shared};
 `
 
@@ -91,13 +106,21 @@ export const Anchor = styled.a`
 `
 
 export const ListItem = styled.li`
-  line-height: 50px;
+  line-height: 40px;
   margin-top: 20px;
+  font-size: 33px;
 
   ${({ theme }) => css`
     @media screen and (max-width: ${theme.breakpoints.lg}) {
       line-height: 30px;
       margin-top: 20px;
+    }
+  `}
+
+  ${({ theme }) => css`
+    @media screen and (max-width: ${theme.breakpoints.lg}) {
+      line-height: 24px;
+      font-size: 18px;
     }
   `}
 `

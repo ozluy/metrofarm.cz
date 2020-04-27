@@ -27,6 +27,13 @@ export const Piece = styled.span`
   background-color: ${({ theme }) => theme.colors.black};
   transition: all 0.4s ease;
   position: absolute;
+
+  ${({ theme }) => css`
+    @media screen and (max-width: ${theme.breakpoints.md}) {
+      width: 30px;
+    }
+  `}
+
   &:nth-child(1) {
     top: 0px;
   }
@@ -53,6 +60,14 @@ export const Burger = styled.button`
   color: transparent;
   border: none !important;
   cursor: pointer;
+
+  ${({ theme }) => css`
+    @media screen and (max-width: ${theme.breakpoints.md}) {
+      right: 20px;
+      top: 20px;
+      width: 30px;
+    }
+  `}
 
   ${({ open }) =>
     open &&
@@ -104,8 +119,8 @@ export const Nav = styled.nav`
 
     ${({ theme }) => css`
       @media screen and (max-width: ${theme.breakpoints.lg}) {
-        font-size: 32px;
-        line-height: 60px;
+        font-size: 24px;
+        line-height: 40px;
       }
     `}
   }
@@ -141,6 +156,12 @@ export const Nav = styled.nav`
           transition-delay: 0.5s;
         }
       }
+
+      ${({ theme }) => css`
+        @media screen and (max-width: ${theme.breakpoints.lg}) {
+          padding: 70px 40px 0 0;
+        }
+      `}
     `}
 `
 
@@ -148,4 +169,14 @@ export const Logo = styled.div`
   a {
     color: ${({ theme }) => theme.colors.black};
   }
+
+  ${({ theme }) => css`
+    @media screen and (max-width: ${theme.breakpoints.md}) {
+      svg {
+        width: 90px;
+        height: 90px;
+        margin-left: -20px;
+      }
+    }
+  `}
 `

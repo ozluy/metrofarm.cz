@@ -24,9 +24,20 @@ const Button = styled.button`
     @media screen and (max-width: ${theme.breakpoints.lg}) {
       font-size: 24px;
       height: 50px;
-      padding: 0 10px;
+      padding: 0 15px;
+      min-width: 250px;
     }
   `}
+
+  ${({ theme }) => css`
+    @media screen and (max-width: ${theme.breakpoints.md}) {
+      font-size: 18px;
+      height: 40px;
+      padding: 0 10px;
+      min-width: 150px;
+    }
+  `}
+  
 
   ${space};
   ${maxHeight};

@@ -16,7 +16,7 @@ import {
 import listSrc from '../../static/list/adopcni_listina_ovce.jpg'
 import listSrc2 from '../../static/list/adopcni_listina_koza.jpg'
 import goatSheepSrc from '../../static/fullscreen/goats-and-sheeps.png'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import Gallery from 'components/Gallery'
 
 const CustomImg = styled(Img)`
@@ -25,9 +25,21 @@ const CustomImg = styled(Img)`
   top: 250px;
 `
 
-const AdopSheepOrGoat = () => {
- 
+const CustomFlex = styled(Flex)`
+  flex-direction: row;
+  justify-content: space-between;
 
+  ${({ theme }) => css`
+    @media screen and (max-width: ${theme.breakpoints.lg}) {
+      flex-direction: column-reverse;
+
+      img {
+        display: none;
+      }
+    }
+  `}
+`
+const AdopSheepOrGoat = () => {
   return (
     <>
       <Section>
@@ -67,7 +79,7 @@ const AdopSheepOrGoat = () => {
         <Container>
           <H1 textAlign="center">Adopce</H1>
 
-          <Flex flexDirection="row" justifyContent="space-between">
+          <CustomFlex>
             <Div maxWidth={{ lg: '700px', md: '500px' }}>
               <H2>Základní členství obsahuje:</H2>
               <ul>
@@ -113,7 +125,7 @@ const AdopSheepOrGoat = () => {
             </Div>
             <Img height={{ lg: 800, mg: 500 }} src={listSrc2} />
             <CustomImg height={{ lg: 800, md: 500 }} src={listSrc} />
-          </Flex>
+          </CustomFlex>
         </Container>
       </Section>
       <Gallery listName="sheepandgoat" />

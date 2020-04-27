@@ -64,14 +64,14 @@ const offerList = [
 ]
 
 const MetroOfferTextGroup = styled(Flex)`
-  min-height: 900px;
+  min-height: 100%;
   flex-direction: column;
   padding: 80px 80px;
   flex: 1;
 
   ${({ theme }) => css`
     @media screen and (max-width: ${theme.breakpoints.lg}) {
-      min-height: 600px;
+      padding: 40px;
     }
   `}
 `
@@ -82,6 +82,15 @@ const MetroOfferImg = styled(Img)`
     @media screen and (max-width: ${theme.breakpoints.lg}) {
       min-height: auto;
       max-height: 600px;
+    }
+  `}
+
+  ${({ theme }) => css`
+    @media screen and (max-width: ${theme.breakpoints.md}) {
+      width: 100%;
+      height: auto;
+      max-height: 100%;
+      min-height: auto;
     }
   `}
 `
@@ -97,10 +106,44 @@ const MetroOffer = styled(Flex)`
       text-align: right;
     }
   }
+
+  ${({ theme }) => css`
+    @media screen and (max-width: ${theme.breakpoints.md}) {
+      flex-direction: column !important;
+
+      ${MetroOfferTextGroup} {
+      align-items: flex-start !important;
+      text-align: left !important;
+    }
+    }
+  `}
 `
 
+const BlackCircle = styled.div`
+  height: 375px;
+  width: 375px;
+  color: ${({ theme }) => theme.colors.white};
+  background-color: ${({ theme }) => theme.colors.black};
+  position: absolute;
+  left: ${375 / -2}px;
+  bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  text-align: center;
+  border-radius: 50%;
+
+  ${({ theme }) => css`
+    @media screen and (max-width: ${theme.breakpoints.lg}) {
+      height: 250px;
+      width: 250px;
+      padding: 20px;
+      left: 0;
+    }
+  `}
+`
 const Home = () => {
- 
   return (
     <>
       <Container>
@@ -129,23 +172,34 @@ const Home = () => {
           </Pragraph>
         </Section>
       </Container>
-      {offerList.map(({ bg, title, img, desc, buttonText, buttonAction }) => (
-        <MetroOffer bg={bg}>
-          <MetroOfferTextGroup>
-            <H1 {...(bg === 'brown' ? { color: 'white' } : {})}>{title}</H1>
-            <Pragraph
-              {...(bg === 'brown' ? { color: 'white' } : {})}
-              maxWidth="500px"
-            >
-              {desc}
-            </Pragraph>
-            <Button maxWidth="250px" mt="auto" onClick={buttonAction}>
-              {buttonText}
-            </Button>
-          </MetroOfferTextGroup>
-          <MetroOfferImg src={img} />
-        </MetroOffer>
-      ))}
+      {offerList.map(
+        ({ bg, title, img, desc, buttonText, buttonAction }, index) => (
+          <MetroOffer bg={bg}>
+            <MetroOfferTextGroup>
+              <H1 {...(bg === 'brown' ? { color: 'white' } : {})}>{title}</H1>
+              <Pragraph
+                {...(bg === 'brown' ? { color: 'white' } : {})}
+                maxWidth="500px"
+              >
+                {desc}
+              </Pragraph>
+              <Button maxWidth="250px" mt="auto" onClick={buttonAction}>
+                {buttonText}
+              </Button>
+            </MetroOfferTextGroup>
+            <Div position="relative">
+              {index == 0 && (
+                <BlackCircle>
+                  <Pragraph>
+                    V ČR se chová téměř 6 milionů nosnic ve velkochovech.
+                  </Pragraph>
+                </BlackCircle>
+              )}
+              <MetroOfferImg src={img} />
+            </Div>
+          </MetroOffer>
+        )
+      )}
       <Container>
         <Section>
           <Flex
