@@ -18,6 +18,7 @@ import listSrc2 from '../../static/list/adopcni_listina_koza.jpg'
 import goatSheepSrc from '../../static/fullscreen/goats-and-sheeps.png'
 import styled, { css } from 'styled-components'
 import Gallery from 'components/Gallery'
+import { navigate } from 'gatsby'
 
 const CustomImg = styled(Img)`
   position: absolute;
@@ -94,9 +95,7 @@ const AdopSheepOrGoat = () => {
               <Pragraph m="40px 0 70px 0">– To vše za 250 Kč/měsíc.</Pragraph>
               <Button
                 onClick={() =>
-                  document
-                    .getElementById('metrofarm-footer')
-                    .scrollIntoView({ behavior: 'smooth' })
+                  navigate('/kontaktni-formular', { replace: true })
                 }
               >
                 Chci adoptovat ovci
@@ -104,9 +103,7 @@ const AdopSheepOrGoat = () => {
               <Pragraph mt="30px"></Pragraph>
               <Button
                 onClick={() =>
-                  document
-                    .getElementById('metrofarm-footer')
-                    .scrollIntoView({ behavior: 'smooth' })
+                  navigate('/kontaktni-formular', { replace: true })
                 }
               >
                 Chci adoptovat kozu

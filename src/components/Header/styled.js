@@ -63,7 +63,7 @@ export const Burger = styled.button`
 
   ${({ theme }) => css`
     @media screen and (max-width: ${theme.breakpoints.md}) {
-      right: 20px;
+      right: 16px;
       top: 20px;
       width: 30px;
     }
@@ -104,7 +104,12 @@ export const Nav = styled.nav`
   /* transition: all 0.4s ease, visibility 0s ease; */
   visibility: hidden;
   opacity: 0;
-  width: 680px;
+
+  ${({ theme }) => css`
+    @media screen and (max-width: ${theme.breakpoints.md}) {
+      width: 100%;
+    }
+  `}
 
   a {
     cursor: pointer;
@@ -119,8 +124,15 @@ export const Nav = styled.nav`
 
     ${({ theme }) => css`
       @media screen and (max-width: ${theme.breakpoints.lg}) {
+        font-size: 32px;
+        line-height: 50px;
+      }
+    `}
+
+    ${({ theme }) => css`
+      @media screen and (max-width: ${theme.breakpoints.md}) {
         font-size: 24px;
-        line-height: 40px;
+        line-height: 60px;
       }
     `}
   }
@@ -128,7 +140,7 @@ export const Nav = styled.nav`
   ${({ open }) =>
     open &&
     css`
-      padding: 120px 140px 0 0;
+      padding: 120px 140px 0 60px;
       visibility: visible;
       opacity: 1;
       height: 100vh;
@@ -141,25 +153,29 @@ export const Nav = styled.nav`
         visibility: visible;
 
         &:nth-child(2) {
-          transition-delay: 0.1s;
+          transition-delay: 0.075s;
         }
         &:nth-child(3) {
-          transition-delay: 0.2s;
+          transition-delay: 0.15s;
         }
         &:nth-child(4) {
-          transition-delay: 0.3s;
+          transition-delay: 0.225s;
         }
         &:nth-child(5) {
-          transition-delay: 0.4s;
+          transition-delay: 0.3s;
         }
         &:nth-child(6) {
-          transition-delay: 0.5s;
+          transition-delay: 0.375s;
         }
       }
 
       ${({ theme }) => css`
         @media screen and (max-width: ${theme.breakpoints.lg}) {
-          padding: 70px 40px 0 0;
+          padding: 140px 100px 0 50px;
+        }
+
+        @media screen and (max-width: ${theme.breakpoints.md}) {
+          padding: 70px 40px 0 20px;
         }
       `}
     `}
@@ -175,7 +191,7 @@ export const Logo = styled.div`
       svg {
         width: 90px;
         height: 90px;
-        margin-left: -20px;
+        margin-left: -4px;
       }
     }
   `}

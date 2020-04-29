@@ -6,7 +6,7 @@ const breakpoints = {
 const theme = {
   breakpoints,
   font: {
-    mdall: css`
+    small: css`
       font-size: 25px;
       font-family: 'Helvatica Regular', Arial, Sans-serif;
       line-height: 30px;

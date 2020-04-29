@@ -28,6 +28,11 @@ html {
     height: 100%;
 }
 
+:root {
+  --main-width: 100vw;
+  --aspect-ratio: 315 / 560;
+}
+
 body{
     margin: 0;
     padding: 0;

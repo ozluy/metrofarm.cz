@@ -6,7 +6,6 @@ import {
   ButtonBack,
   ButtonNext,
   DotGroup,
-  Dot,
 } from 'pure-react-carousel'
 import styled, { css } from 'styled-components'
 import { H1, Img, Div } from 'components/Elements'
@@ -23,9 +22,10 @@ const sharedButtonStyle = css`
   ${({ theme }) => css`
     @media screen and (max-width: ${theme.breakpoints.md}) {
       svg {
-        height: 50px;
-        width: 50px;
+        height: 60px;
+        width: 60px;
       }
+      top: 500px;
     }
   `}
 `
@@ -46,8 +46,8 @@ export const Wrapper = styled.div`
 
     ${({ theme }) => css`
       @media screen and (max-width: ${theme.breakpoints.md}) {
-        height: 375px;
-        width: 250px;
+        height: 420px;
+        width: 280px;
       }
     `}
   }
@@ -72,7 +72,7 @@ export const Wrapper = styled.div`
 
     ${({ theme }) => css`
       @media screen and (max-width: ${theme.breakpoints.md}) {
-       width: 250px;
+       width: 280px;
       }
     `}
 

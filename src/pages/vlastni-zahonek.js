@@ -18,6 +18,7 @@ import listSrc from '../../static/list/zahonkova_listina.jpg'
 import stepanSrc from '../../static/fullscreen/stepan_riha.jpg'
 import styled, { css } from 'styled-components'
 import Gallery from 'components/Gallery'
+import { navigate } from 'gatsby'
 
 const CustomFlex = styled(Flex)`
   flex-direction: row;
@@ -116,11 +117,7 @@ const RentGarden = () => {
                 - Členský příspěvek na rok 2020 je 1 300 Kč.
               </Pragraph>
               <Button
-                onClick={() =>
-                  document
-                    .getElementById('metrofarm-footer')
-                    .scrollIntoView({ behavior: 'smooth' })
-                }
+                onClick={() => navigate('/kontaktni-formular', { replace: true })}
               >
                 Chci vlastní záhon
               </Button>

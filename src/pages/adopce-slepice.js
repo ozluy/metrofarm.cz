@@ -18,6 +18,7 @@ import chickenSrc from '../../static/fullscreen/chicken.png'
 import Gallery from 'components/Gallery'
 
 import styled, { css } from 'styled-components'
+import { navigate } from 'gatsby'
 
 const CustomFlex = styled(Flex)`
   flex-direction: row;
@@ -31,6 +32,13 @@ const CustomFlex = styled(Flex)`
       }
     }
   `}
+`
+
+const Iframe = styled.iframe`
+  width: 100%;
+  height: calc(var(--main-width) * var(--aspect-ratio));
+  vertical-align: top;
+  border: none;
 `
 
 const AdopChicken = () => {
@@ -72,7 +80,12 @@ const AdopChicken = () => {
           </Flex>
         </Container>
       </Section>
-      <Img width="100%" src={chickenSrc} />
+      <Iframe
+        src="https://www.youtube.com/embed/r1ncaNxIc-4"
+        frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></Iframe>
       <Section bg="green" id="form" color="white">
         <Container>
           <H1 textAlign="center">Adopce</H1>
@@ -92,11 +105,7 @@ const AdopChicken = () => {
               </ul>
               <Pragraph m="40px 0 70px 0">– To vše za 250 Kč/měsíc.</Pragraph>
               <Button
-                onClick={() =>
-                  document
-                    .getElementById('metrofarm-footer')
-                    .scrollIntoView({ behavior: 'smooth' })
-                }
+             onClick={() => navigate('/kontaktni-formular', { replace: true })}
               >
                 Chci adoptovat slepici
               </Button>

@@ -1,5 +1,5 @@
-import React, { useContext } from 'react'
-
+import React from 'react'
+import { navigate, replace } from 'gatsby'
 import Container from 'components/Container'
 import Button from 'components/Button'
 import {
@@ -113,7 +113,7 @@ const HowItWorks = () => {
       <CustomFlex id="how-to">
         {listOfOptions.map(({ title, img, buttonText, desc }) => (
           <ItemWrapper key={title}>
-            <Pragraph>{title} </Pragraph>
+            <Pragraph >{title} </Pragraph>
             <Div mb="40px">
               <Span>{desc}</Span>
             </Div>
@@ -121,9 +121,7 @@ const HowItWorks = () => {
             <Div mt="40px">
               <Button
                 onClick={() =>
-                  document
-                    .getElementById('metrofarm-footer')
-                    .scrollIntoView({ behavior: 'smooth' })
+                  navigate('/kontaktni-formular', { replace: true })
                 }
               >
                 {buttonText}
