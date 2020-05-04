@@ -12,6 +12,7 @@ import {
   Pragraph,
   Span,
   ListItem,
+  EndofList,
 } from 'components/Elements'
 import listSrc from '../../static/list/adopcni_listina_slepice.jpg'
 import chickenSrc from '../../static/fullscreen/chicken.png'
@@ -19,6 +20,7 @@ import Gallery from 'components/Gallery'
 
 import styled, { css } from 'styled-components'
 import { navigate } from 'gatsby'
+import Seo from 'components/Seo'
 
 const CustomFlex = styled(Flex)`
   flex-direction: row;
@@ -44,6 +46,7 @@ const Iframe = styled.iframe`
 const AdopChicken = () => {
   return (
     <>
+      <Seo />
       <Section>
         <Container>
           <Flex
@@ -86,15 +89,15 @@ const AdopChicken = () => {
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen
       ></Iframe>
-      <Section bg="green" id="form" color="white">
+      <Section bg="green" id="form">
         <Container>
           <H1 textAlign="center">Adopce</H1>
 
           <CustomFlex>
             <Div pr="60px">
-              <H2>Základní členství obsahuje:</H2>
+              <H2>Co to obnáší?</H2>
               <ul>
-                <ListItem>Dostanete certifikát.</ListItem>
+                <ListItem>Dostanete adopční listinu.</ListItem>
                 <ListItem>Můžete slepici pojmenovat.</ListItem>
                 <ListItem>
                   Vámi vybraná slepice dostane unikátní kroužek.
@@ -103,11 +106,13 @@ const AdopChicken = () => {
                   Každý měsíc si můžete vyzvednout 20 vajec od našich slepiček.
                 </ListItem>
               </ul>
-              <Pragraph m="40px 0 70px 0">– To vše za 250 Kč/měsíc.</Pragraph>
+              <EndofList m="40px 0 70px 0">– To vše za 250 Kč/měsíc.</EndofList>
               <Button
-             onClick={() => navigate('/kontaktni-formular', { replace: true })}
+                onClick={() =>
+                  navigate('/kontaktni-formular', { replace: true })
+                }
               >
-                Chci adoptovat slepici
+                Chci adopční listinu
               </Button>
 
               <Div mt="70px">

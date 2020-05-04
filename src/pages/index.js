@@ -19,6 +19,7 @@ import {
   Section,
 } from 'components/Elements'
 import Button from 'components/Button'
+import Seo from 'components/Seo'
 
 const offerList = [
   {
@@ -38,7 +39,7 @@ const offerList = [
     bg: 'green',
   },
   {
-    title: 'Adopce zvířat',
+    title: 'Adopce koz a ovcí',
     desc: `Kromě slepic máme na farmě také kozy, ovce, včely a v roce 2020 plánujeme přibrat i další zvířata.`,
     buttonText: 'Více o adopci zvířat',
     buttonAction: () => navigate('/adopte-koz-a-ovci/', { replace: true }),
@@ -54,7 +55,7 @@ const offerList = [
     bg: 'yellow',
   },
   {
-    title: 'Adopce slepice',
+    title: 'Jak se můžu zapojit?',
     desc: `Můžete s námi například pečovat o zvířata, starat se o společné záhony nebo si zde realizovat vlastní projekt. Místa máme dost.`,
     buttonText: 'Více',
     buttonAction: () => navigate('/adopte-koz-a-ovci/', { replace: true }),
@@ -112,9 +113,9 @@ const MetroOffer = styled(Flex)`
       flex-direction: column !important;
 
       ${MetroOfferTextGroup} {
-      align-items: flex-start !important;
-      text-align: left !important;
-    }
+        align-items: flex-start !important;
+        text-align: left !important;
+      }
     }
   `}
 `
@@ -146,6 +147,7 @@ const BlackCircle = styled.div`
 const Home = () => {
   return (
     <>
+      <Seo />
       <Container>
         <Div>
           <Img width="100%" src={bannerSrc} />
@@ -174,7 +176,7 @@ const Home = () => {
       </Container>
       {offerList.map(
         ({ bg, title, img, desc, buttonText, buttonAction }, index) => (
-          <MetroOffer bg={bg}>
+          <MetroOffer key={title} bg={bg}>
             <MetroOfferTextGroup>
               <H1 {...(bg === 'brown' ? { color: 'white' } : {})}>{title}</H1>
               <Pragraph

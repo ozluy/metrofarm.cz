@@ -1,3 +1,4 @@
+import img0 from '../../../static/gallery/00.png'
 import img1 from '../../../static/gallery/1.png'
 import img2 from '../../../static/gallery/2.png'
 import img3 from '../../../static/gallery/3.png'
@@ -22,6 +23,5 @@ import img23 from '../../../static/gallery/23.png'
 export default {
   sheepandgoat: [img9, img12, img13, img14, img15, img20, img21, img22],
   chicken: [img16, img17, img18, img23],
-  garden: [img1, img2, img3, img4, img5, img6, img7, img8],
-  
+  garden: [img0, img1, img2, img3, img4, img5, img6, img7, img8],
 }

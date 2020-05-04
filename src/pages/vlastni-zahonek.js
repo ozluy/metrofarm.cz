@@ -12,6 +12,7 @@ import {
   Pragraph,
   Span,
   ListItem,
+  EndofList,
 } from 'components/Elements'
 import bannerSrc from '../../static/banners/banner-2.svg'
 import listSrc from '../../static/list/zahonkova_listina.jpg'
@@ -19,6 +20,7 @@ import stepanSrc from '../../static/fullscreen/stepan_riha.jpg'
 import styled, { css } from 'styled-components'
 import Gallery from 'components/Gallery'
 import { navigate } from 'gatsby'
+import Seo from 'components/Seo'
 
 const CustomFlex = styled(Flex)`
   flex-direction: row;
@@ -64,6 +66,7 @@ export const Banner = styled(Div)`
 const RentGarden = () => {
   return (
     <>
+      <Seo />
       <Container>
         <Banner>
           <Flex
@@ -113,13 +116,15 @@ const RentGarden = () => {
                 <ListItem>Parkoviště pro ty, co nenechají auto doma.</ListItem>
                 <ListItem> 3 ha oplocené louky na vyřádění. </ListItem>
               </ul>
-              <Pragraph m="40px 0 70px 0">
+              <EndofList m="40px 0 70px 0">
                 - Členský příspěvek na rok 2020 je 1 300 Kč.
-              </Pragraph>
+              </EndofList>
               <Button
-                onClick={() => navigate('/kontaktni-formular', { replace: true })}
+                onClick={() =>
+                  navigate('/kontaktni-formular', { replace: true })
+                }
               >
-                Chci vlastní záhon
+                Chci záhonkovou listinu
               </Button>
 
               <Div mt="70px">

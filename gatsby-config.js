@@ -6,13 +6,15 @@
 
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Tutorial`,
-    siteUrl: `https://ozluy.surge.sh`,
-    description: `Blazing fast modern site generator for React`,
+    title: `MetroFarm`,
+    siteUrl: `http://metrofarm.cz`,
+    description: `Komunitní Zahrada`,
+    ogImage: `/metrofarm-og-image.png`,
   },
   plugins: [
     `gatsby-plugin-layout`,
     `gatsby-plugin-styled-components`,
+    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-resolve-src`,
     // {
     //   resolve: `gatsby-source-wordpress`,
@@ -32,7 +34,7 @@ module.exports = {
     //     // If useACF is true, then the source plugin will try to import the WordPress ACF Plugin contents.
     //     // This feature is untested for sites hosted on WordPress.com
     //     useACF: true,
-     
+
     //   },
     // },
   ],

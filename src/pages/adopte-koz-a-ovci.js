@@ -12,6 +12,7 @@ import {
   Pragraph,
   Span,
   ListItem,
+  EndofList,
 } from 'components/Elements'
 import listSrc from '../../static/list/adopcni_listina_ovce.jpg'
 import listSrc2 from '../../static/list/adopcni_listina_koza.jpg'
@@ -19,6 +20,7 @@ import goatSheepSrc from '../../static/fullscreen/goats-and-sheeps.png'
 import styled, { css } from 'styled-components'
 import Gallery from 'components/Gallery'
 import { navigate } from 'gatsby'
+import Seo from 'components/Seo'
 
 const CustomImg = styled(Img)`
   position: absolute;
@@ -43,6 +45,7 @@ const CustomFlex = styled(Flex)`
 const AdopSheepOrGoat = () => {
   return (
     <>
+      <Seo />
       <Section>
         <Container>
           <Flex
@@ -76,15 +79,15 @@ const AdopSheepOrGoat = () => {
         </Container>
       </Section>
       <Img width="100%" src={goatSheepSrc} />
-      <Section bg="green" id="form" color="white">
+      <Section bg="green" id="form">
         <Container>
           <H1 textAlign="center">Adopce</H1>
 
           <CustomFlex>
             <Div maxWidth={{ lg: '700px', md: '500px' }}>
-              <H2>Základní členství obsahuje:</H2>
+              <H2>Co to obnáší?</H2>
               <ul>
-                <ListItem>Certifikát.</ListItem>
+                <ListItem>Dostanete adopční listinu.</ListItem>
                 <ListItem>Kozí mléko dle aktuální dojivosti.</ListItem>
                 <ListItem>Možnost naučit se podojit kozu.</ListItem>
                 <ListItem>
@@ -92,7 +95,7 @@ const AdopSheepOrGoat = () => {
                   našich akcí.
                 </ListItem>
               </ul>
-              <Pragraph m="40px 0 70px 0">– To vše za 250 Kč/měsíc.</Pragraph>
+              <EndofList m="40px 0 70px 0">– To vše za 250 Kč/měsíc.</EndofList>
               <Button
                 onClick={() =>
                   navigate('/kontaktni-formular', { replace: true })

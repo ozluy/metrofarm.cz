@@ -16,28 +16,23 @@ import bannerSrc from '../../static/banners/banner-3.svg'
 import babySrc from '../../static/fullscreen/garden-king.png'
 import beeSrc from '../../static/fullscreen/bees.jpg'
 import styled, { css } from 'styled-components'
+import Seo from 'components/Seo'
 
 export const Banner = styled(Div)`
-  height: 100vh;
   padding-top: 150px;
   background-repeat: no-repeat;
   background-size: 100% auto;
   position: relative;
   > ${Img} {
-    position: absolute;
-    top: 100px;
-    left: 0;
-    right: 0;
-    z-index: -1;
+    margin: -200px auto;
   }
 
   ${({ theme }) => css`
     @media screen and (max-width: ${theme.breakpoints.md}) {
-      height: auto;
+      min-height: auto;
       padding-top: 70px;
       > ${Img} {
-        height: auto;
-        position: static;
+        margin: 0 auto;
       }
     }
   `}
@@ -45,7 +40,7 @@ export const Banner = styled(Div)`
 
 const CustomFlex = styled(Flex)`
   justify-content: space-around;
-
+  padding: 40px;
   ${({ theme }) => css`
     @media screen and (max-width: ${theme.breakpoints.md}) {
       justify-content: space-between;
@@ -61,20 +56,21 @@ const CustomFlex = styled(Flex)`
 const VizePricipy = () => {
   return (
     <>
+      <Seo />
       <Container>
         <Banner>
           <H1 textAlign="center">Vize & principy</H1>
-          <Img m="0 auto" width="100%" maxWidth="1500px" src={bannerSrc} />
+          <Img m="0 auto" width="100%" src={bannerSrc} />
         </Banner>
-        <CustomFlex>
-          <H1>Péče o budoucnost</H1>
-          <H1>Péče o zemi</H1>
-        </CustomFlex>
-        <CustomFlex>
-          <H1>Péče o lidi</H1>
-          <H1>Regulace konzumace</H1>
-        </CustomFlex>
       </Container>
+      <CustomFlex>
+        <H1>Péče o budoucnost</H1>
+        <H1>Péče o zemi</H1>
+      </CustomFlex>
+      <CustomFlex>
+        <H1>Péče o lidi</H1>
+        <H1>Regulace konzumace</H1>
+      </CustomFlex>
       <Img width="100%" src={babySrc} />
       <Section>
         <Container>

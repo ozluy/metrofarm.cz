@@ -105,7 +105,7 @@ export const Anchor = styled.a`
   ${flexbox};
 `
 
-export const ListItem = styled.li`
+const sharedCss = css`
   line-height: 40px;
   margin-top: 20px;
   font-size: 33px;
@@ -123,6 +123,15 @@ export const ListItem = styled.li`
       font-size: 18px;
     }
   `}
+`
+
+export const ListItem = styled.li`
+  ${sharedCss}
+`
+
+export const EndofList = styled.div`
+  ${sharedCss}
+  ${shared};
 `
 
 export const Section = styled.section`

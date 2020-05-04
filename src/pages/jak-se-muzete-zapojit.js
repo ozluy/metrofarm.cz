@@ -17,6 +17,7 @@ import listSrcKoza from '../../static/list/adopcni_listina_koza.jpg'
 import listSrcSlepice from '../../static/list/adopcni_listina_slepice.jpg'
 import listSrcZahonkova from '../../static/list/zahonkova_listina.jpg'
 import styled, { css } from 'styled-components'
+import Seo from 'components/Seo'
 
 const listOfOptions = [
   {
@@ -26,10 +27,10 @@ const listOfOptions = [
     buttonText: 'Chci si adoptovat slepici',
   },
   {
-    title: 'Chcete si pronajmout zahradu?',
+    title: 'Chcete vlastní záhonek?',
     desc: 'Odpovědi na své otázky ohledně pronájmu najdeš zde.',
     img: listSrcZahonkova,
-    buttonText: 'Chci si pronajmout zahradu',
+    buttonText: 'Chci vlastní záhonek?',
   },
   {
     title: 'Adoptuj si kozu',
@@ -57,6 +58,7 @@ const CustomFlex = styled(Flex)`
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      padding-top: 0px;
     }
   `}
 `
@@ -64,11 +66,13 @@ const CustomFlex = styled(Flex)`
 const ItemWrapper = styled(Div)`
   text-align: center;
   margin-bottom: 80px;
-  width: 50%;
+  width: 30%;
 
   ${({ theme }) => css`
     @media screen and (max-width: ${theme.breakpoints.lg}) {
-      width: 95%;
+      padding: 16px;
+      width: 100%;
+      margin-bottom: 0px;
     }
   `}
 `
@@ -76,6 +80,7 @@ const ItemWrapper = styled(Div)`
 const HowItWorks = () => {
   return (
     <>
+      <Seo />
       <Section>
         <Container>
           <Flex
