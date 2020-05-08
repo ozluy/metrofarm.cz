@@ -5,6 +5,40 @@ export const Wrapper = styled.header`
   z-index: 10;
 `
 
+export const LangSelection = styled.div`
+  position: absolute;
+  right: calc(100% + 16px);
+  top: 0;
+  color: ${({ theme }) => theme.colors.black};
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  line-height: 20px;
+`
+
+export const LangOption = styled.button`
+  background: transparent;
+  padding: 0 4px;
+  border: none;
+  color: inherit;
+  ${({ theme }) => theme.fontFamily.bold};
+  opacity: 1;
+  outline: none;
+  width: auto;
+  font-size: 14px;
+  line-height: 20px;
+  width: 75px;
+  cursor: pointer;
+
+  ${({ active }) =>
+    active &&
+    css`
+      ${({ theme }) => theme.fontFamily.regular};
+      opacity: 0.5;
+    `}
+`
+
 export const Navbar = styled.nav`
   display: flex;
   align-items: center;
@@ -86,6 +120,10 @@ export const Burger = styled.button`
           opacity: 0;
         }
       }
+
+      ${LangSelection} {
+        color: ${({ theme }) => theme.colors.white};
+      }
     `}
 `
 
@@ -101,7 +139,6 @@ export const Nav = styled.nav`
   padding: 0 140px 0 0;
   height: 0;
   overflow: hidden;
-  /* transition: all 0.4s ease, visibility 0s ease; */
   visibility: hidden;
   opacity: 0;
 

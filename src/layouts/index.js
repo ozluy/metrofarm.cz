@@ -2,6 +2,7 @@ import React, { useMemo, createContext } from 'react'
 import { ThemeProvider } from 'styled-components'
 import styled from 'styled-components'
 import theme from 'common/theme'
+import { LanguageProvider } from "components/LanguageContex"
 import GlobalStyles from 'common/GlobalStyles'
 import Footer from 'components/Footer'
 import Header from 'components/Header'
@@ -18,12 +19,12 @@ const Layout = ({ children }) => {
 
   return (
     <ThemeProvider theme={theme}>
-      <>
+      <LanguageProvider>
         <GlobalStyles />
         <Header />
         {memoMain}
         <Footer />
-      </>
+      </LanguageProvider>
     </ThemeProvider>
   )
 }

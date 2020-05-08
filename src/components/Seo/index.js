@@ -60,6 +60,10 @@ const Seo = ({
           property: `og:image`,
           content: `${siteUrl}${customOgImage || ogImage}`,
         },
+        {
+          property: `keywords`,
+          content: description,
+        },
       ].concat(customMeta)}
     />
   )

@@ -144,14 +144,21 @@ const BlackCircle = styled.div`
     }
   `}
 `
+
+const BannerImg = styled(Img)`
+  width: 100%;
+  ${({ theme }) => css`
+    @media screen and (max-width: ${theme.breakpoints.md}) {
+      margin-top: 20px;
+  `}
+`
+
 const Home = () => {
   return (
     <>
       <Seo />
       <Container>
-        <Div>
-          <Img width="100%" src={bannerSrc} />
-        </Div>
+        <BannerImg src={bannerSrc} />
         <Section>
           <Pragraph m="0 auto" maxWidth="1440px" textAlign="center">
             Vítejte na stránkách komunitní zahrady Metro Farm. Na naší zahradě

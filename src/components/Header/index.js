@@ -1,4 +1,5 @@
-import React, { useState, Component } from 'react'
+import React, { useState, Component, useContext } from 'react'
+import { useIntl } from 'react-intl'
 import onClickOutside from 'react-onclickoutside'
 import { Link } from 'gatsby'
 import Container from 'components/Container'
@@ -6,9 +7,20 @@ import Moon from 'components/Icon/moon'
 import Sun from 'components/Icon/sun'
 import TextSize from 'components/Icon/textSize'
 import Icon from 'components/Icon'
-import { Wrapper, Navbar, Logo, Burger, Nav, Piece } from './styled'
+import {
+  Wrapper,
+  Navbar,
+  Logo,
+  Burger,
+  Nav,
+  Piece,
+  LangSelection,
+  LangOption,
+} from './styled'
 import MetroFarmLogo from 'components/MetroFarmLogo'
+import LanguageContext from 'components/LanguageContex'
 import theme from 'common/theme'
+import { Div } from 'components/Elements'
 
 class NavBarComp extends Component {
   render() {
@@ -20,12 +32,29 @@ const EnhancedNavBar = onClickOutside(NavBarComp)
 
 const Header = ({ pages }) => {
   const [menuOpen, setMenuOpen] = useState(false)
+  const langContext = useContext(LanguageContext)
+  const intl = useIntl()
   const navigationList = [
-    { url: '/adopce-slepice/', title: 'Adopce slepice' },
-    { url: '/vlastni-zahonek/', title: 'Vlastní záhonek' },
-    { url: '/adopte-koz-a-ovci/', title: 'Adopce koz a ovcí' },
-    { url: '/vize-and-principy/', title: 'Vize & Principy' },
-    { url: '/jak-se-muzete-zapojit/', title: 'Jak se můžete zapojit?' },
+    {
+      url: '/adopce-slepice/',
+      title: intl.formatMessage({ id: 'header-nav-adoption-chicken' }),
+    },
+    {
+      url: '/vlastni-zahonek/',
+      title: intl.formatMessage({ id: 'header-nav-rent-garden' }),
+    },
+    {
+      url: '/adopte-koz-a-ovci/',
+      title: intl.formatMessage({ id: 'header-nav-adoption-sheep-and-goat' }),
+    },
+    {
+      url: '/vize-and-principy/',
+      title: intl.formatMessage({ id: 'header-nav-vision-and-principle' }),
+    },
+    {
+      url: '/jak-se-muzete-zapojit/',
+      title: intl.formatMessage({ id: 'header-nav-how-to-get-involved' }),
+    },
   ]
   return (
     <Wrapper>
@@ -40,6 +69,21 @@ const Header = ({ pages }) => {
             <Piece />
             <Piece />
             <Piece />
+            <LangSelection onClick={event => event.stopPropagation()}>
+              <LangOption
+                active={langContext.lang === 'cs'}
+                onClick={() => langContext.setLang('cs')}
+              >
+                Čeština
+              </LangOption>
+              |
+              <LangOption
+                active={langContext.lang === 'en'}
+                onClick={() => langContext.setLang('en')}
+              >
+                English
+              </LangOption>
+            </LangSelection>
           </Burger>
           <Nav open={menuOpen}>
             {navigationList.map(({ title, url }) => (
@@ -61,7 +105,7 @@ const Header = ({ pages }) => {
                   .scrollIntoView({ behavior: 'smooth' })
               }}
             >
-              Kontakt
+              {intl.formatMessage({ id: 'header-nav-contact' })}
             </a>
           </Nav>
         </EnhancedNavBar>
