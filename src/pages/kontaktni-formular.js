@@ -158,7 +158,7 @@ const ContactForm = () => {
               .catch(error => {
                 console.error('Error:', error) // eslint-disable-line no-console
               })
-            alert('Message sent')
+            alert(formatMessage({ id: 'contact-sent-message' }))
             navigate('/')
           }}
         >

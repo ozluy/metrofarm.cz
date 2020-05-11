@@ -26,24 +26,28 @@ const listOfOptions = formatMessage => [
     title: formatMessage({ id: 'involve-hen' }),
     desc: formatMessage({ id: 'involve-adopt' }),
     img: listSrcSlepice,
+    link: '/adopce-slepice/',
     buttonText: formatMessage({ id: 'involve-hen-action' }),
   },
   {
     title: formatMessage({ id: 'involve-garden' }),
     desc: formatMessage({ id: 'involve-rent' }),
     img: listSrcZahonkova,
+    link: '/vlastni-zahonek/',
     buttonText: formatMessage({ id: 'involve-garden-action' }),
   },
   {
     title: formatMessage({ id: 'involve-goat' }),
     desc: formatMessage({ id: 'involve-adopt' }),
     img: listSrcKoza,
+    link: '/adopte-koz-a-ovci/',
     buttonText: formatMessage({ id: 'involve-goat-action' }),
   },
   {
     title: formatMessage({ id: 'involve-sheep' }),
     desc: formatMessage({ id: 'involve-adopt' }),
     img: listSrcOvce,
+    link: '/adopte-koz-a-ovci/',
     buttonText: formatMessage({ id: 'involve-sheep-action' }),
   },
 ]
@@ -115,13 +119,13 @@ const HowItWorks = () => {
       </Section>
       <CustomFlex id="how-to">
         {listOfOptions(formatMessage).map(
-          ({ title, img, buttonText, desc }) => (
+          ({ title, img, buttonText, desc, link }) => (
             <ItemWrapper key={title}>
               <Pragraph>{title} </Pragraph>
               <Div mb={{ sm: '10px', md: '20px', lg: '40px' }}>
                 <Span>
                   {desc}
-                  <Link to="/kontaktni-formular/">
+                  <Link to={link}>
                     <Span color="black" textDecoration="underline">
                       {formatMessage({ id: 'involve-here' })}
                     </Span>

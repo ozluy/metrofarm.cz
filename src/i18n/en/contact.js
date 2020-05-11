@@ -52,4 +52,8 @@ export default [
     id: 'contact-send',
     defaultMessage: 'Send',
   },
+  {
+    id: 'contact-sent-message',
+    defaultMessage: 'Message sent',
+  },
 ]

@@ -52,4 +52,8 @@ export default [
     id: 'contact-send',
     defaultMessage: 'Odeslat',
   },
+  {
+    id: 'contact-sent-message',
+    defaultMessage: 'Zpráva odeslána',
+  },
 ]

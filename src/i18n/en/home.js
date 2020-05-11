@@ -24,7 +24,7 @@ export default [
   },
   {
     id: 'home-adopt-hen-action',
-    defaultMessage: 'More about hen adoption',
+    defaultMessage: 'More info',
   },
   {
     id: 'home-rent-garden',
@@ -38,7 +38,7 @@ export default [
   },
   {
     id: 'home-rent-garden-action',
-    defaultMessage: 'More about owning garden bed',
+    defaultMessage: 'More info',
   },
   {
     id: 'home-adopt-animal',
@@ -51,7 +51,7 @@ export default [
   },
   {
     id: 'home-adopt-animal-action',
-    defaultMessage: 'More about animal adoption',
+    defaultMessage: 'More info',
   },
   { id: 'home-priciple-and-goal', defaultMessage: 'Principles & Objectives' },
   {
