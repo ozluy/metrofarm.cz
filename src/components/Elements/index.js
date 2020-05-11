@@ -80,6 +80,15 @@ export const H2 = styled.h2`
 export const Pragraph = styled.p`
   ${({ theme }) => theme.font.medium};
   margin: 16px 0 ${shared};
+
+  a {
+    color: inherit;
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    text-decoration: underline;
+  }
 `
 
 export const Span = styled.span`
@@ -130,6 +139,12 @@ export const ListItem = styled.li`
 `
 
 export const EndofList = styled.div`
+  a {
+    color: inherit;
+    ${({ theme }) => theme.fontFamily.bold};
+    text-decoration: underline;
+  }
+
   ${sharedCss}
   ${shared};
 `

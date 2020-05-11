@@ -14,13 +14,14 @@ import {
   ListItem,
   EndofList,
 } from 'components/Elements'
-import listSrc from '../../static/list/adopcni_listina_ovce.jpg'
-import listSrc2 from '../../static/list/adopcni_listina_koza.jpg'
+import listSrc from '../../static/list/adopcni_listina_ovce.png'
+import listSrc2 from '../../static/list/adopcni_listina_koza.png'
 import goatSheepSrc from '../../static/fullscreen/goats-and-sheeps.png'
 import styled, { css } from 'styled-components'
 import Gallery from 'components/Gallery'
 import { navigate } from 'gatsby'
 import Seo from 'components/Seo'
+import { useIntl } from 'react-intl'
 
 const CustomImg = styled(Img)`
   position: absolute;
@@ -43,6 +44,7 @@ const CustomFlex = styled(Flex)`
   `}
 `
 const AdopSheepOrGoat = () => {
+  const { formatMessage } = useIntl()
   return (
     <>
       <Seo />
@@ -54,14 +56,11 @@ const AdopSheepOrGoat = () => {
             maxWidth="80%"
             m=" 0 auto"
           >
-            <H1 textAlign="center">Adopce koz a ovcí</H1>
+            <H1 textAlign="center">
+              {formatMessage({ id: 'animal-banner' })}
+            </H1>
             <Pragraph textAlign="center">
-              Kromě slepic máme na farmě také kozy a ovce. Učíme nejen sebe, ale
-              také děti a jejich rodiče, co všechno chov hospodářských zvířat
-              obnáší. Učíme se vážit si jiných tvorů a oceňovat práci lidí,
-              kteří pro nás kvalitní potraviny vyrábějí. Náš chov můžete
-              podpořit nejen fyzicky, a to pomocí s údržbou prostorů pro zvířata
-              a pomocí s každodenní péčí, ale i adopcí vybrané ovečky nebo kozy.
+              {formatMessage({ id: 'animal-banner-desc' })}
             </Pragraph>
 
             <Pragraph
@@ -73,7 +72,7 @@ const AdopSheepOrGoat = () => {
                   .scrollIntoView({ behavior: 'smooth' })
               }
             >
-              Chci adoptovat!
+              {formatMessage({ id: 'animal-banner-action' })}
             </Pragraph>
           </Flex>
         </Container>
@@ -81,27 +80,34 @@ const AdopSheepOrGoat = () => {
       <Img width="100%" src={goatSheepSrc} />
       <Section bg="green" id="form">
         <Container>
-          <H1 textAlign="center">Adopce</H1>
+          <H1 textAlign="center">{formatMessage({ id: 'animal-adoption' })}</H1>
 
           <CustomFlex>
             <Div maxWidth={{ lg: '700px', md: '500px' }}>
-              <H2>Co to obnáší?</H2>
+              <H2>{formatMessage({ id: 'animal-adoption-how' })}</H2>
               <ul>
-                <ListItem>Dostanete adopční listinu.</ListItem>
-                <ListItem>Kozí mléko dle aktuální dojivosti.</ListItem>
-                <ListItem>Možnost naučit se podojit kozu.</ListItem>
                 <ListItem>
-                  Možnost naučit se spřádat ovčí vlnu na vřeténku na jedné z
-                  našich akcí.
+                  {formatMessage({ id: 'animal-adoption-how-1' })}
+                </ListItem>
+                <ListItem>
+                  {formatMessage({ id: 'animal-adoption-how-2' })}
+                </ListItem>
+                <ListItem>
+                  {formatMessage({ id: 'animal-adoption-how-3' })}
+                </ListItem>
+                <ListItem>
+                  {formatMessage({ id: 'animal-adoption-how-4' })}
                 </ListItem>
               </ul>
-              <EndofList m="40px 0 70px 0">– To vše za 250 Kč/měsíc.</EndofList>
+              <EndofList m="40px 0 70px 0">
+                – {formatMessage({ id: 'animal-adoption-how-5' })}
+              </EndofList>
               <Button
                 onClick={() =>
                   navigate('/kontaktni-formular', { replace: true })
                 }
               >
-                Chci adoptovat ovci
+                {formatMessage({ id: 'animal-adoption-action' })}
               </Button>
               <Pragraph mt="30px"></Pragraph>
               <Button
@@ -109,11 +115,14 @@ const AdopSheepOrGoat = () => {
                   navigate('/kontaktni-formular', { replace: true })
                 }
               >
-                Chci adoptovat kozu
+                {formatMessage({ id: 'animal-adoption-action-2' })}
               </Button>
               <Div mt="70px">
                 <Span>
-                  <Span ff="bold">Pro více informací kontaktujte</Span>
+                  <Span ff="bold">
+                    {' '}
+                    {formatMessage({ id: 'animal-adoption-contact' })}
+                  </Span>
                   <Div mt="20px">Tereza Janovská</Div>
                   <Div>420 737 670 019</Div>
                   <Div>tereza@janovsky.eu</Div>

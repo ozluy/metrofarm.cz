@@ -14,13 +14,14 @@ import {
   ListItem,
   EndofList,
 } from 'components/Elements'
-import listSrc from '../../static/list/adopcni_listina_slepice.jpg'
+import listSrc from '../../static/list/adopcni_listina_slepice.png'
 import chickenSrc from '../../static/fullscreen/chicken.png'
 import Gallery from 'components/Gallery'
 
 import styled, { css } from 'styled-components'
 import { navigate } from 'gatsby'
 import Seo from 'components/Seo'
+import { useIntl } from 'react-intl'
 
 const CustomFlex = styled(Flex)`
   flex-direction: row;
@@ -44,6 +45,7 @@ const Iframe = styled.iframe`
 `
 
 const AdopChicken = () => {
+  const { formatMessage } = useIntl()
   return (
     <>
       <Seo />
@@ -55,19 +57,12 @@ const AdopChicken = () => {
             maxWidth="80%"
             m=" 0 auto"
           >
-            <H1 textAlign="center">Adopce slepice</H1>
+            <H1 textAlign="center">{formatMessage({ id: 'hen-banner' })}</H1>
             <Pragraph textAlign="center">
-              Většinu slepic jsme vykoupili z klecových velkochovů a dáváme jim
-              nový domov. Holky se prohání na čerstvém vzduchu, vyhřívají na
-              slunci, popelí ve svých jamkách, schovávají před deštěm a
-              přetahují o právě nahrabané červíky. Mají více prostoru, svobody a
-              mohou projevovat svoje přirozené chování. Dávají nám vajíčka a
-              dělají společnost.
+              {formatMessage({ id: 'hen-banner-desc-1' })}
             </Pragraph>
             <Pragraph textAlign="center">
-              Kromě toho nám ale i pomáhají s údržbou trávníku, hnojením záhonů,
-              recyklací bioodpadu ze záhonů a občas i z našich domácností.
-              Nejsou to jen stroje na vajíčka, ale i zahradníci a parťáci.
+              {formatMessage({ id: 'hen-banner-desc-2' })}
             </Pragraph>
             <Pragraph
               cursor="pointer"
@@ -78,7 +73,7 @@ const AdopChicken = () => {
                   .scrollIntoView({ behavior: 'smooth' })
               }
             >
-              Adoptujte si slepici!
+              {formatMessage({ id: 'hen-banner-action' })}
             </Pragraph>
           </Flex>
         </Container>
@@ -91,33 +86,41 @@ const AdopChicken = () => {
       ></Iframe>
       <Section bg="green" id="form">
         <Container>
-          <H1 textAlign="center">Adopce</H1>
+          <H1 textAlign="center">{formatMessage({ id: 'hen-adoption' })}</H1>
 
           <CustomFlex>
             <Div pr="60px">
-              <H2>Co to obnáší?</H2>
+              <H2>{formatMessage({ id: 'hen-adoption-how' })}</H2>
               <ul>
-                <ListItem>Dostanete adopční listinu.</ListItem>
-                <ListItem>Můžete slepici pojmenovat.</ListItem>
                 <ListItem>
-                  Vámi vybraná slepice dostane unikátní kroužek.
+                  {formatMessage({ id: 'hen-adoption-how-1' })}
                 </ListItem>
                 <ListItem>
-                  Každý měsíc si můžete vyzvednout 20 vajec od našich slepiček.
+                  {formatMessage({ id: 'hen-adoption-how-2' })}
+                </ListItem>
+                <ListItem>
+                  {formatMessage({ id: 'hen-adoption-how-3' })}
+                </ListItem>
+                <ListItem>
+                  {formatMessage({ id: 'hen-adoption-how-4' })}
                 </ListItem>
               </ul>
-              <EndofList m="40px 0 70px 0">– To vše za 250 Kč/měsíc.</EndofList>
+              <EndofList m="40px 0 70px 0">
+                – {formatMessage({ id: 'hen-adoption-how-5' })}
+              </EndofList>
               <Button
                 onClick={() =>
                   navigate('/kontaktni-formular', { replace: true })
                 }
               >
-                Chci adopční listinu
+                {formatMessage({ id: 'hen-adoption-action' })}
               </Button>
 
               <Div mt="70px">
                 <Span>
-                  <Span ff="bold">Pro více informací kontaktujte</Span>
+                  <Span ff="bold">
+                    {formatMessage({ id: 'hen-adoption-contact' })}
+                  </Span>
                   <Div mt="20px">Štěpán Říha</Div>
                   <Div>+420 725 307 598</Div>
                   <Div>stepan.riha@metrofarm.cz</Div>

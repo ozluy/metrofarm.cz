@@ -20,7 +20,6 @@ import {
 import MetroFarmLogo from 'components/MetroFarmLogo'
 import LanguageContext from 'components/LanguageContex'
 import theme from 'common/theme'
-import { Div } from 'components/Elements'
 
 class NavBarComp extends Component {
   render() {
@@ -54,6 +53,10 @@ const Header = ({ pages }) => {
     {
       url: '/jak-se-muzete-zapojit/',
       title: intl.formatMessage({ id: 'header-nav-how-to-get-involved' }),
+    },
+    {
+      url: '/kontaktni-formular/',
+      title: intl.formatMessage({ id: 'header-nav-contact' }),
     },
   ]
   return (
@@ -96,17 +99,7 @@ const Header = ({ pages }) => {
                 {title}
               </Link>
             ))}
-            <a
-              href={null}
-              onClick={() => {
-                setMenuOpen(false)
-                document
-                  .getElementById('metrofarm-footer')
-                  .scrollIntoView({ behavior: 'smooth' })
-              }}
-            >
-              {intl.formatMessage({ id: 'header-nav-contact' })}
-            </a>
+          
           </Nav>
         </EnhancedNavBar>
       </Container>

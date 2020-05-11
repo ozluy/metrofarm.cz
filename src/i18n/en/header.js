@@ -5,7 +5,7 @@ export default [
   },
   {
     id: 'header-nav-rent-garden',
-    defaultMessage: 'Renting garden',
+    defaultMessage: 'Owning garden bed',
   },
   {
     id: 'header-nav-adoption-sheep-and-goat',

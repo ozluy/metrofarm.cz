@@ -11,6 +11,7 @@ import styled, { css } from 'styled-components'
 import { H1, Img, Div } from 'components/Elements'
 import Arrow from 'components/Icon/arrow'
 import imgList from './imgList'
+import { useIntl } from 'react-intl'
 
 const sharedButtonStyle = css`
   top: 400px;
@@ -72,7 +73,7 @@ export const Wrapper = styled.div`
 
     ${({ theme }) => css`
       @media screen and (max-width: ${theme.breakpoints.md}) {
-       width: 280px;
+        width: 280px;
       }
     `}
 
@@ -102,9 +103,10 @@ export const Wrapper = styled.div`
 
 const Gallery = ({ listName = 'garden' }) => {
   const selectedList = imgList[listName]
+  const { formatMessage } = useIntl()
   return (
     <Wrapper>
-      <H1 textAlign="center">Fotogalerie</H1>
+      <H1 textAlign="center">{formatMessage({ id: 'home-gallery' })}</H1>
       <Div color="black" m="0 auto" id="img-sizer">
         <CarouselProvider
           naturalSlideWidth={400}

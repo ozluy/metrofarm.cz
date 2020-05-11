@@ -15,12 +15,13 @@ import {
   EndofList,
 } from 'components/Elements'
 import bannerSrc from '../../static/banners/banner-2.svg'
-import listSrc from '../../static/list/zahonkova_listina.jpg'
+import listSrc from '../../static/list/zahonkova_listina.png'
 import stepanSrc from '../../static/fullscreen/stepan_riha.jpg'
 import styled, { css } from 'styled-components'
 import Gallery from 'components/Gallery'
 import { navigate } from 'gatsby'
 import Seo from 'components/Seo'
+import { useIntl } from 'react-intl'
 
 const CustomFlex = styled(Flex)`
   flex-direction: row;
@@ -64,6 +65,7 @@ export const Banner = styled(Div)`
 `
 
 const RentGarden = () => {
+  const { formatMessage } = useIntl()
   return (
     <>
       <Seo />
@@ -75,10 +77,9 @@ const RentGarden = () => {
             maxWidth="650px"
             m=" 0 auto"
           >
-            <H1 textAlign="center">Vlastní záhonek</H1>
+            <H1 textAlign="center">{formatMessage({ id: 'garden-banner' })}</H1>
             <Pragraph textAlign="center">
-              Místa máme dost a vítáni jsou jak úplní začátečníci, tak ostřílení
-              zemědělci.
+              {formatMessage({ id: 'garden-banner-desc' })}
             </Pragraph>
             <Pragraph
               cursor="pointer"
@@ -89,7 +90,7 @@ const RentGarden = () => {
                   .scrollIntoView({ behavior: 'smooth' })
               }
             >
-              Přidejte se!
+              {formatMessage({ id: 'garden-banner-action' })}
             </Pragraph>
           </Flex>
           <Img m="0 auto" width="100%" maxWidth="1500px" src={bannerSrc} />
@@ -97,39 +98,53 @@ const RentGarden = () => {
       </Container>
       <Section bg="brown" id="form" color="white">
         <Container>
-          <H1 textAlign="center">Vlastní záhonek</H1>
+          <H1 textAlign="center">{formatMessage({ id: 'garden-renting' })}</H1>
 
           <CustomFlex>
             <Div pr="60px">
-              <H2>Základní členství obsahuje:</H2>
+              <H2>{formatMessage({ id: 'garden-renting-how' })}:</H2>
               <ul>
                 <ListItem>
-                  5 m2 zahradníkem nedotčeného pěstebního prostoru, který čeká
-                  na ukázku Vašich zahradnických dovedností.
+                  {formatMessage({ id: 'garden-renting-how-1' })}
                 </ListItem>
-                <ListItem>Zahradnické nářadí.</ListItem>
-                <ListItem>Vodu na zalévání, ale ne na plýtvání.</ListItem>
                 <ListItem>
-                  Kompost, hnůj, štěpku, dřevo a stavební materiál na
-                  zúrodňování a zkrášlování Vašich záhonků.
+                  {formatMessage({ id: 'garden-renting-how-2' })}
                 </ListItem>
-                <ListItem>Parkoviště pro ty, co nenechají auto doma.</ListItem>
-                <ListItem> 3 ha oplocené louky na vyřádění. </ListItem>
+                <ListItem>
+                  {formatMessage({ id: 'garden-renting-how-3' })}
+                </ListItem>
+                <ListItem>
+                  {formatMessage({ id: 'garden-renting-how-4' })}
+                </ListItem>
+                <ListItem>
+                  {formatMessage({ id: 'garden-renting-how-5' })}
+                </ListItem>
+                <ListItem>
+                  {formatMessage({ id: 'garden-renting-how-6' })}
+                </ListItem>
               </ul>
-              <EndofList m="40px 0 70px 0">
-                - Členský příspěvek na rok 2020 je 1 300 Kč.
+              <EndofList m="40px 0 40px 0">
+                - {formatMessage({ id: 'garden-renting-how-7' })}
               </EndofList>
+              <EndofList
+                mb="70px"
+                dangerouslySetInnerHTML={{
+                  __html: formatMessage({ id: 'garden-renting-example' }),
+                }}
+              ></EndofList>
               <Button
                 onClick={() =>
                   navigate('/kontaktni-formular', { replace: true })
                 }
               >
-                Chci záhonkovou listinu
+                {formatMessage({ id: 'garden-renting-action' })}
               </Button>
 
               <Div mt="70px">
                 <Span>
-                  <Span ff="bold">Pro více informací kontaktujte</Span>
+                  <Span ff="bold">
+                    {formatMessage({ id: 'garden-renting-contact' })}
+                  </Span>
                   <Div mt="20px">Štěpán Říha</Div>
                   <Div>+420 725 307 598</Div>
                   <Div>stepan.riha@metrofarm.cz</Div>

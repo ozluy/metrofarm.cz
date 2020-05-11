@@ -1,10 +1,24 @@
 export default [
   {
-    id: 'footer-copyright',
-    defaultMessage: 'autorská práva {name}, {year}',
+    id: 'footer-title',
+    defaultMessage: 'Kontakt',
   },
   {
-    id: 'footer-made-with-love',
-    defaultMessage: 'Vyrobeno pomocí ❤️',
+    id: 'footer-contact-person',
+    defaultMessage: 'Koordinátor projektu a kontaktní osoba',
+  },
+
+  {
+    id: 'footer-cooperation',
+    defaultMessage: 'Projekt MetroFarm je realizován',
+  },
+  {
+    id: 'footer-cooperation-rest',
+    defaultMessage: 'pod záštitou zapsaných spolků.',
+  },
+
+  {
+    id: 'footer-partners',
+    defaultMessage: 'Partneři',
   },
 ]

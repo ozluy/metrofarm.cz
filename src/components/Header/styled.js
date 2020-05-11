@@ -19,23 +19,24 @@ export const LangSelection = styled.div`
 
 export const LangOption = styled.button`
   background: transparent;
-  padding: 0 4px;
+  padding: 0 2px;
   border: none;
   color: inherit;
-  ${({ theme }) => theme.fontFamily.bold};
-  opacity: 1;
+
+  ${({ theme }) => theme.fontFamily.regular};
+  opacity: 0.5;
   outline: none;
   width: auto;
   font-size: 14px;
   line-height: 20px;
-  width: 75px;
+  width: 70px;
   cursor: pointer;
 
   ${({ active }) =>
     active &&
     css`
-      ${({ theme }) => theme.fontFamily.regular};
-      opacity: 0.5;
+      ${({ theme }) => theme.fontFamily.bold};
+      opacity: 1;
     `}
 `
 
@@ -162,13 +163,13 @@ export const Nav = styled.nav`
     ${({ theme }) => css`
       @media screen and (max-width: ${theme.breakpoints.lg}) {
         font-size: 32px;
-        line-height: 50px;
+        line-height: 80px;
       }
     `}
 
     ${({ theme }) => css`
       @media screen and (max-width: ${theme.breakpoints.md}) {
-        font-size: 24px;
+        font-size: 20px;
         line-height: 60px;
       }
     `}
@@ -219,8 +220,12 @@ export const Nav = styled.nav`
 `
 
 export const Logo = styled.div`
+position: relative;
   a {
     color: ${({ theme }) => theme.colors.black};
+    z-index: 11;
+    display: inline-block;
+    position: absolute;
   }
 
   ${({ theme }) => css`

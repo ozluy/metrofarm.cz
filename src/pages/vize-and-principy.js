@@ -17,6 +17,7 @@ import babySrc from '../../static/fullscreen/garden-king.png'
 import beeSrc from '../../static/fullscreen/bees.jpg'
 import styled, { css } from 'styled-components'
 import Seo from 'components/Seo'
+import { useIntl } from 'react-intl'
 
 export const Banner = styled(Div)`
   padding-top: 150px;
@@ -54,53 +55,46 @@ const CustomFlex = styled(Flex)`
 `
 
 const VizePricipy = () => {
+  const { formatMessage } = useIntl()
   return (
     <>
       <Seo />
       <Container>
         <Banner>
-          <H1 textAlign="center">Vize & principy</H1>
+          <H1 textAlign="center">{formatMessage({ id: 'vision-title' })}</H1>
           <Img m="0 auto" width="100%" src={bannerSrc} />
         </Banner>
       </Container>
       <CustomFlex>
-        <H1>Péče o budoucnost</H1>
-        <H1>Péče o zemi</H1>
+        <H1>{formatMessage({ id: 'vision-1' })}</H1>
+        <H1>{formatMessage({ id: 'vision-2' })}</H1>
       </CustomFlex>
       <CustomFlex>
-        <H1>Péče o lidi</H1>
-        <H1>Regulace konzumace</H1>
+        <H1>{formatMessage({ id: 'vision-3' })}</H1>
+        <H1>{formatMessage({ id: 'vision-4' })}</H1>
       </CustomFlex>
       <Img width="100%" src={babySrc} />
       <Section>
         <Container>
           <Div m="0 auto" maxWidth="1000px" textAlign="center">
-            <H1>Cíle krátkodobé</H1>
-            <Pragraph>
-              Vybudovat a provozovat komunitní zahradu a malé hospodářství
-              v centru Prahy.
+            <H1>{formatMessage({ id: 'vision-short-term' })}</H1>
+            <Pragraph>{formatMessage({ id: 'vision-short-term-1' })}</Pragraph>
+            <Pragraph mt="40px">
+              {formatMessage({ id: 'vision-short-term-2' })}
             </Pragraph>
             <Pragraph mt="40px">
-              Vytvořit odběrné místo pro produkty ekologicky hospodařících
-              zemědělců.
+              {formatMessage({ id: 'vision-short-term-3' })}
+            </Pragraph>
+            <H1 mt="100px">{formatMessage({ id: 'vision-medium-term' })}</H1>
+            <Pragraph mt="40px">
+              {formatMessage({ id: 'vision-medium-term-1' })}
             </Pragraph>
             <Pragraph mt="40px">
-              Navazovat spolupráci a partnerství s podobně orientovanými celky i
-              jednotlivci.
+              {formatMessage({ id: 'vision-medium-term-2' })}
             </Pragraph>
-            <H1 mt="100px">Cíle střednědobé</H1>
+            <H1 mt="100px">{formatMessage({ id: 'vision-long-term' })}</H1>
             <Pragraph mt="40px">
-              Získat v Praze nebo blízkém okolí do užívání zemědělskou půdu a
-              hospodářské zázemí.
-            </Pragraph>
-            <Pragraph mt="40px">
-              Zahájit zemědělskou činnost, hospodařit ekologicky a udržitelně
-              při dodržování permakulturních pravidel.
-            </Pragraph>
-            <H1 mt="100px">Cíle dlouhodobé</H1>
-            <Pragraph mt="40px">
-              Provozovat ukázkový, výnosný zemědělský celek fungující v souladu
-              s přírodou a jejími principy.
+              {formatMessage({ id: 'vision-long-term-1' })}
             </Pragraph>
             <Pragraph
               cursor="pointer"
@@ -112,7 +106,7 @@ const VizePricipy = () => {
               textDecoration="underline"
               mt="40px"
             >
-              Zapojte se do toho s námi!
+              {formatMessage({ id: 'vision-action' })}
             </Pragraph>
           </Div>
         </Container>

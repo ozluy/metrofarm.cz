@@ -20,45 +20,46 @@ import {
 } from 'components/Elements'
 import Button from 'components/Button'
 import Seo from 'components/Seo'
+import { useIntl } from 'react-intl'
 
-const offerList = [
+const offerList = formatMessage => [
   {
-    title: 'Adopce slepice',
-    desc: `Protože nechceme kupovat vejce z klecových chovů, rozhodli jsme se společně chovat slepice ve volném výběhu v naší METRO FARM.`,
-    buttonText: 'Více o adopci',
+    title: formatMessage({ id: 'home-adopt-hen' }),
+    desc: formatMessage({ id: 'home-adopt-hen-desc' }),
+    buttonText: formatMessage({ id: 'home-adopt-hen-action' }),
     buttonAction: () => navigate('/adopce-slepice/', { replace: true }),
     img: home1Src,
     bg: 'brown',
   },
   {
-    title: 'Vlastní záhonek',
-    desc: `Místa máme dost a vítáni jsou jak úplní začátečníci, tak ostřílení zemědělci.`,
-    buttonText: 'Více o záhoncích',
+    title: formatMessage({ id: 'home-rent-garden' }),
+    desc: formatMessage({ id: 'home-rent-garden-desc' }),
+    buttonText: formatMessage({ id: 'home-rent-garden-action' }),
     buttonAction: () => navigate('/vlastni-zahonek/', { replace: true }),
     img: home2Src,
     bg: 'green',
   },
   {
-    title: 'Adopce koz a ovcí',
-    desc: `Kromě slepic máme na farmě také kozy, ovce, včely a v roce 2020 plánujeme přibrat i další zvířata.`,
-    buttonText: 'Více o adopci zvířat',
+    title: formatMessage({ id: 'home-adopt-animal' }),
+    desc: formatMessage({ id: 'home-adopt-animal-desc' }),
+    buttonText: formatMessage({ id: 'home-adopt-animal-action' }),
     buttonAction: () => navigate('/adopte-koz-a-ovci/', { replace: true }),
     img: home3Src,
     bg: 'brown',
   },
   {
-    title: 'Principy & cíle',
-    desc: `Víme, jak zadržovat vodu v krajině, fixovat CO2 v půdě, zvyšovat biodiverzitu. Umíme pěstovat plodiny bez umělých hnojiv. Víme, jak hospodařit udržitelně. Když se chce, všechno jde.`,
-    buttonText: 'Více',
+    title: formatMessage({ id: 'home-priciple-and-goal' }),
+    desc: formatMessage({ id: 'home-priciple-and-goal-desc' }),
+    buttonText: formatMessage({ id: 'home-priciple-and-goal-action' }),
     buttonAction: () => navigate('/vize-and-principy/', { replace: true }),
     img: home4Src,
     bg: 'yellow',
   },
   {
-    title: 'Jak se můžu zapojit?',
-    desc: `Můžete s námi například pečovat o zvířata, starat se o společné záhony nebo si zde realizovat vlastní projekt. Místa máme dost.`,
-    buttonText: 'Více',
-    buttonAction: () => navigate('/adopte-koz-a-ovci/', { replace: true }),
+    title: formatMessage({ id: 'home-how-to-get-involved' }),
+    desc: formatMessage({ id: 'home-how-to-get-involved-desc' }),
+    buttonText: formatMessage({ id: 'home-how-to-get-involved-action' }),
+    buttonAction: () => navigate('/jak-se-muzete-zapojit/', { replace: true }),
     img: home5Src,
     bg: 'green',
   },
@@ -73,6 +74,12 @@ const MetroOfferTextGroup = styled(Flex)`
   ${({ theme }) => css`
     @media screen and (max-width: ${theme.breakpoints.lg}) {
       padding: 40px;
+    }
+  `}
+
+  ${({ theme }) => css`
+    @media screen and (max-width: ${theme.breakpoints.md}) {
+      padding: 16px;
     }
   `}
 `
@@ -126,7 +133,7 @@ const BlackCircle = styled.div`
   color: ${({ theme }) => theme.colors.white};
   background-color: ${({ theme }) => theme.colors.black};
   position: absolute;
-  left: ${375 / -2}px;
+  left: 0;
   bottom: 30px;
   display: flex;
   justify-content: center;
@@ -154,6 +161,7 @@ const BannerImg = styled(Img)`
 `
 
 const Home = () => {
+  const { formatMessage } = useIntl()
   return (
     <>
       <Seo />
@@ -161,11 +169,7 @@ const Home = () => {
         <BannerImg src={bannerSrc} />
         <Section>
           <Pragraph m="0 auto" maxWidth="1440px" textAlign="center">
-            Vítejte na stránkách komunitní zahrady Metro Farm. Na naší zahradě
-            se snažíme nejen pěstovat, kompostovat, recyklovat a udržitelně
-            spravovat náš kousek země, ale také zde chováme drobné hospodářské
-            zvířectvo. Místa máme dost a vítáni jsou jak úplní začátečníci, tak
-            ostřílení zemědělci.
+            {formatMessage({ id: 'home-banner-text' })}
           </Pragraph>
           <Pragraph
             cursor="pointer"
@@ -177,11 +181,11 @@ const Home = () => {
             textAlign="center"
             textDecoration="underline"
           >
-            Přijďte nás navštívit!
+            {formatMessage({ id: 'home-banner-link' })}
           </Pragraph>
         </Section>
       </Container>
-      {offerList.map(
+      {offerList(formatMessage).map(
         ({ bg, title, img, desc, buttonText, buttonAction }, index) => (
           <MetroOffer key={title} bg={bg}>
             <MetroOfferTextGroup>
@@ -192,15 +196,15 @@ const Home = () => {
               >
                 {desc}
               </Pragraph>
-              <Button maxWidth="250px" mt="auto" onClick={buttonAction}>
-                {buttonText}
-              </Button>
+              <Div mt="auto">
+                <Button onClick={buttonAction}>{buttonText}</Button>
+              </Div>
             </MetroOfferTextGroup>
             <Div position="relative">
               {index == 0 && (
                 <BlackCircle>
                   <Pragraph>
-                    V ČR se chová téměř 6 milionů nosnic ve velkochovech.
+                    {formatMessage({ id: 'home-adopt-hen-extra-desc' })}
                   </Pragraph>
                 </BlackCircle>
               )}
@@ -218,29 +222,20 @@ const Home = () => {
             alignItems="center"
             flexDirection="column"
           >
-            <H1>Nepřehlédněte</H1>
+            <H1>{formatMessage({ id: 'home-dont-miss' })}</H1>
 
             <Pragraph>
-              Sociální zázemí máme v blízké hlavní budově nebo u našeho
-              parkoviště.
+              {formatMessage({ id: 'home-dont-miss-desc-1' })}
             </Pragraph>
+            <Pragraph
+              dangerouslySetInnerHTML={{
+                __html: formatMessage({
+                  id: 'home-dont-miss-desc-2',
+                }),
+              }}
+            />
             <Pragraph>
-              Hlavní budova
-              <Anchor
-                target="_blank"
-                textDecoration="underline"
-                rel="noreferrer noopener"
-                href="https://www.facebook.com/volnocasholesovice/"
-              >
-                {' '}
-                Volnočasového centra Holešovice{' '}
-              </Anchor>
-              Vás také láká na svůj klubový bar zásobený nealko i alko nápoji
-              otevřený každý den od 15:15.
-            </Pragraph>
-            <Pragraph>
-              Zahradu stále budujeme. Budeme rádi, pokud se do tohoto nejen
-              tvůrčího, ale i seznamovacího procesu více či méně zapojíte.
+              {formatMessage({ id: 'home-dont-miss-desc-3' })}
             </Pragraph>
           </Flex>
         </Section>
