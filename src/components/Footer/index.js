@@ -4,6 +4,8 @@ import Container from 'components/Container'
 import { Flex, Img, Span, Anchor, H1 } from 'components/Elements'
 import mapSrc from '../../../static/footer/metrofarm_on_map.jpg'
 import euSrc from '../../../static/footer/eu-logo.png'
+import blueboardSrc from '../../../static/footer/blueboard-logo.png'
+
 import facebookSrc from '../../../static/footer/social/facebook.png'
 import instagramSrc from '../../../static/footer/social/insta.png'
 import { useIntl } from 'react-intl'
@@ -94,7 +96,10 @@ const Footer = () => {
             {intl.formatMessage({ id: 'footer-partners' })}:
             <br />
             <br />
-            <Img width="212px" src={euSrc} />
+            <Img width="212px" alt="EU logo" src={euSrc} />
+            <br />
+            <br />
+            <Img width="212px" alt="Blue Board Logo" src={blueboardSrc} />
             <br />
             <br />
             <br />
@@ -106,7 +111,7 @@ const Footer = () => {
               display="inline-flex"
               href="https://www.instagram.com/metrofarma/"
             >
-              <Img src={instagramSrc} width="45px" />
+              <Img alt="MetroFarm on Instagram" src={instagramSrc} width="45px" />
               <Span m="20px">@metrofarma</Span>
             </Anchor>
             <br />
@@ -118,7 +123,7 @@ const Footer = () => {
               display="inline-flex"
               href="https://www.facebook.com/MetroFarm-1308581092618428/"
             >
-              <Img src={facebookSrc} width="45px" />
+              <Img alt="Metrofarm on Facebook" src={facebookSrc} width="45px" />
               <Span m="20px">MetroFarm</Span>
             </Anchor>
             <br />
@@ -130,7 +135,7 @@ const Footer = () => {
               display="inline-flex"
               href="https://www.facebook.com/volnocasholesovice/"
             >
-              <Img src={facebookSrc} width="45px" />
+              <Img alt="Volnočasové centrum Holešovice on Facebook" src={facebookSrc} width="45px" />
               <Span m="20px">Volnočasové centrum Holešovice</Span>
             </Anchor>
           </CustomSpan>

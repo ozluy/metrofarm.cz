@@ -34,7 +34,7 @@ export default [
       'Vytvořit odběrné místo pro produkty ekologicky hospodařících zemědělců.',
   },
   {
-    id: 'vision-sort-term-3',
+    id: 'vision-short-term-3',
     defaultMessage:
       'Navazovat spolupráci a partnerství s podobně orientovanými celky i jednotlivci.',
   },
