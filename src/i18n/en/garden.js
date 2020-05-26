@@ -10,7 +10,7 @@ export default [
   {
     id: 'garden-renting-example',
     defaultMessage:
-      '<a href="https://medium.com/@ozluy/gardening-in-prague-from-zero-to-hero-ed463b4ce35" target="_blank" rel="no-opener no-referrer">Garding story from 2019 at Metrofarm</a>',
+      '<a href="https://medium.com/@ozluy/gardening-in-prague-from-zero-to-hero-ed463b4ce35" target="_blank" rel="no-opener no-referrer">Gardening story from 2019 at Metrofarm</a>',
   },
   { id: 'garden-renting-how', defaultMessage: 'Basic membership includes' },
   {
