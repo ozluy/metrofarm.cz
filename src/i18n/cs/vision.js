@@ -60,10 +60,10 @@ export default [
   {
     id: 'vision-long-term-1',
     defaultMessage:
-      'Provozovat ukázkový, výnosný zemědělský celek fungující v souladu s přírodou a jejími principy.',
+      'Provozovat finančně nezávislé zemědělské hospodářství fungující v souladu s přírodou a jejími principy.',
   },
   {
     id: 'vision-action',
-    defaultMessage: 'Zapojte se do toho s námi!',
+    defaultMessage: 'Přidejte se do toho s námi!',
   },
 ]

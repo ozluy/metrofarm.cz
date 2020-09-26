@@ -74,12 +74,16 @@ const RentGarden = () => {
           <Flex
             flexDirection="column"
             alignItems="center"
-            maxWidth="650px"
+            maxWidth="900px"
             m=" 0 auto"
           >
             <H1 textAlign="center">{formatMessage({ id: 'garden-banner' })}</H1>
             <Pragraph textAlign="center">
               {formatMessage({ id: 'garden-banner-desc' })}
+            </Pragraph>
+
+            <Pragraph mt="24px" color="red" textAlign="center">
+              {formatMessage({ id: 'garden-banner-desc-sub' })}
             </Pragraph>
             <Pragraph
               cursor="pointer"

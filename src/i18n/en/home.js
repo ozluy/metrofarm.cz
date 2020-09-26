@@ -5,6 +5,10 @@ export default [
       'Welcome to the Metro Farm community garden website. In our garden, we not only grow, compost, and recycle in order to sustainably manage our land, but we also breed small livestock. We have lots of space and we welcome total beginners, as well as, experienced farmers.',
   },
   {
+    id: 'home-banner-text-sub',
+    defaultMessage: 'Until 31.10.2020, we must vacate our current location at the Bubny railway station. We move the entire garden and its animal inhabitants to Císařský Ostrov (Císařský Island). We are already looking forward to the new season in a new place.'
+  },
+  {
     id: 'home-banner-link',
     defaultMessage: 'Come to visit us!',
   },

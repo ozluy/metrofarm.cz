@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components'
 import Container from 'components/Container'
 import { Flex, Img, Span, Anchor, H1 } from 'components/Elements'
 import mapSrc from '../../../static/footer/metrofarm_on_map.jpg'
-import euSrc from '../../../static/footer/eu-logo.png'
+import euSrc from '../../../static/footer/eu-logo.jpg'
 import blueboardSrc from '../../../static/footer/blueboard-logo.png'
 
 import facebookSrc from '../../../static/footer/social/facebook.png'
@@ -85,7 +85,7 @@ const Footer = () => {
             IČ: 22880569
             <br />
             <br />
-            Občanskému sdružení Alternativa II, z.s.
+            Občanské sdružení Alternativa II, z.s.
             <br />
             Terronská 894/56, 160 00, Praha 6
             <br />

@@ -5,6 +5,11 @@ export default [
     defaultMessage:
       'Místa máme dost a vítáni jsou jak úplní začátečníci, tak ostřílení zemědělci.',
   },
+  {
+    id: 'garden-banner-desc-sub',
+    defaultMessage:
+      'V nejbližší době aktualizujeme podmínky členství na rok 2021.',
+  },
   { id: 'garden-banner-action', defaultMessage: 'Přidejte se!' },
   { id: 'garden-renting', defaultMessage: 'Vlastní záhonek' },
   { id: 'garden-renting-how', defaultMessage: 'Základní členství obsahuje' },

@@ -5,6 +5,10 @@ export default [
       'Vítejte na stránkách komunitní zahrady Metro Farm. Na naší zahradě se snažíme nejen pěstovat, kompostovat, recyklovat a udržitelně spravovat náš kousek země, ale také zde chováme drobné hospodářské zvířectvo. Místa máme dost a vítáni jsou jak úplní začátečníci, tak ostřílení zemědělci.',
   },
   {
+    id: 'home-banner-text-sub',
+    defaultMessage: 'Do 31.10. 2020 musíme vyklidit naše současné místo u nádraží Bubny. Celou zahradu i s jejími zvířecími obyvateli přesouváme na Císařský ostrov. Již se těšíme na novou sezónu na novém místě.'
+  },
+  {
     id: 'home-banner-link',
     defaultMessage: 'Přijďte nás navštívit!',
   },

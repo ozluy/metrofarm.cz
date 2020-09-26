@@ -5,6 +5,11 @@ export default [
     defaultMessage:
       'We have plenty of space and we welcome total beginners as well as experienced farmers.',
   },
+  {
+    id: 'garden-banner-desc-sub',
+    defaultMessage:
+      'We will update the membership conditions for 2021 in the near future.',
+  },
   { id: 'garden-banner-action', defaultMessage: 'Join in!' },
   { id: 'garden-renting', defaultMessage: 'Your own garden bed' },
   {

@@ -20,6 +20,7 @@ import {
 import MetroFarmLogo from 'components/MetroFarmLogo'
 import LanguageContext from 'components/LanguageContex'
 import theme from 'common/theme'
+import { Anchor } from 'components/Elements'
 
 class NavBarComp extends Component {
   render() {
@@ -57,6 +58,7 @@ const Header = ({ pages }) => {
     {
       url: '/kontaktni-formular/',
       title: intl.formatMessage({ id: 'header-nav-contact' }),
+      action: true,
     },
   ]
   return (
@@ -89,17 +91,35 @@ const Header = ({ pages }) => {
             </LangSelection>
           </Burger>
           <Nav open={menuOpen}>
-            {navigationList.map(({ title, url }) => (
-              <Link
-                activeStyle={{ color: theme.colors.green }}
-                onClick={() => setMenuOpen(false)}
-                key={title}
-                to={url}
-              >
-                {title}
-              </Link>
-            ))}
-          
+            {navigationList.map(({ title, url, action }) =>
+              !action ? (
+                <Link
+                  activeStyle={{ color: theme.colors.green }}
+                  onClick={() => setMenuOpen(false)}
+                  key={title}
+                  to={url}
+                >
+                  {title}
+                </Link>
+              ) : (
+                <Anchor
+                  onClick={() => {
+                    setMenuOpen(false)
+                    document
+                      .getElementById('metrofarm-footer')
+                      .scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start',
+                        inline: 'nearest',
+                      })
+                  }}
+                  href={null}
+                  key={title}
+                >
+                  {title}
+                </Anchor>
+              )
+            )}
           </Nav>
         </EnhancedNavBar>
       </Container>

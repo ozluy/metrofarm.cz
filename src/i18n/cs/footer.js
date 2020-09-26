@@ -14,7 +14,7 @@ export default [
   },
   {
     id: 'footer-cooperation-rest',
-    defaultMessage: 'pod záštitou zapsaných spolků.',
+    defaultMessage: 've spolupráci zapsaných spolků',
   },
 
   {

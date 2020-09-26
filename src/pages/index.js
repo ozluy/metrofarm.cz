@@ -171,6 +171,9 @@ const Home = () => {
           <Pragraph m="0 auto" maxWidth="1440px" textAlign="center">
             {formatMessage({ id: 'home-banner-text' })}
           </Pragraph>
+          <Pragraph m="24px auto 0 auto" maxWidth="1440px" textAlign="center" color="red">
+            {formatMessage({ id: 'home-banner-text-sub' })}
+          </Pragraph>
           <Pragraph
             cursor="pointer"
             onClick={() =>
