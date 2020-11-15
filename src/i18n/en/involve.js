@@ -11,7 +11,7 @@ export default [
   {
     id: 'involve-link',
     defaultMessage:
-      'Naturally, you can create your own garden bed or adopt a hen, a goat or a sheep.',
+      'Naturally, you can create your own garden bed or adopt a hen.',
   },
 
   {

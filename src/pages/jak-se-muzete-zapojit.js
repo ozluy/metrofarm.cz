@@ -12,8 +12,8 @@ import {
   Pragraph,
   Span,
 } from 'components/Elements'
-import listSrcOvce from '../../static/list/adopcni_listina_ovce.png'
-import listSrcKoza from '../../static/list/adopcni_listina_koza.png'
+// import listSrcOvce from '../../static/list/adopcni_listina_ovce.png'
+// import listSrcKoza from '../../static/list/adopcni_listina_koza.png'
 import listSrcSlepice from '../../static/list/adopcni_listina_slepice.png'
 import listSrcZahonkova from '../../static/list/zahonkova_listina.png'
 import styled, { css } from 'styled-components'
@@ -36,20 +36,20 @@ const listOfOptions = formatMessage => [
     link: '/vlastni-zahonek/',
     buttonText: formatMessage({ id: 'involve-garden-action' }),
   },
-  {
-    title: formatMessage({ id: 'involve-goat' }),
-    desc: formatMessage({ id: 'involve-adopt' }),
-    img: listSrcKoza,
-    link: '/adopte-koz-a-ovci/',
-    buttonText: formatMessage({ id: 'involve-goat-action' }),
-  },
-  {
-    title: formatMessage({ id: 'involve-sheep' }),
-    desc: formatMessage({ id: 'involve-adopt' }),
-    img: listSrcOvce,
-    link: '/adopte-koz-a-ovci/',
-    buttonText: formatMessage({ id: 'involve-sheep-action' }),
-  },
+  // {
+  //   title: formatMessage({ id: 'involve-goat' }),
+  //   desc: formatMessage({ id: 'involve-adopt' }),
+  //   img: listSrcKoza,
+  //   link: '/adopte-koz-a-ovci/',
+  //   buttonText: formatMessage({ id: 'involve-goat-action' }),
+  // },
+  // {
+  //   title: formatMessage({ id: 'involve-sheep' }),
+  //   desc: formatMessage({ id: 'involve-adopt' }),
+  //   img: listSrcOvce,
+  //   link: '/adopte-koz-a-ovci/',
+  //   buttonText: formatMessage({ id: 'involve-sheep-action' }),
+  // },
 ]
 
 const CustomFlex = styled(Flex)`

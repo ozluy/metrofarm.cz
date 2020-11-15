@@ -43,10 +43,10 @@ const Header = ({ pages }) => {
       url: '/vlastni-zahonek/',
       title: intl.formatMessage({ id: 'header-nav-rent-garden' }),
     },
-    {
-      url: '/adopte-koz-a-ovci/',
-      title: intl.formatMessage({ id: 'header-nav-adoption-sheep-and-goat' }),
-    },
+    // {
+    //   url: '/adopte-koz-a-ovci/',
+    //   title: intl.formatMessage({ id: 'header-nav-adoption-sheep-and-goat' }),
+    // },
     {
       url: '/vize-and-principy/',
       title: intl.formatMessage({ id: 'header-nav-vision-and-principle' }),

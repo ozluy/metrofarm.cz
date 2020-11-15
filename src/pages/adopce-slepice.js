@@ -108,6 +108,10 @@ const AdopChicken = () => {
               <EndofList m="40px 0 70px 0">
                 – {formatMessage({ id: 'hen-adoption-how-5' })}
               </EndofList>
+              <EndofList m="40px 0 70px 0">
+                {formatMessage({ id: 'footer-bank-no' })}: 270228304/0300
+              </EndofList>
+
               <Button
                 onClick={() =>
                   navigate('/kontaktni-formular', { replace: true })

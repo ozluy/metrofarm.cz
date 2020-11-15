@@ -21,4 +21,8 @@ export default [
     id: 'footer-partners',
     defaultMessage: 'Partneři',
   },
+  {
+    id: 'footer-bank-no',
+    defaultMessage: 'Číslo účtu',
+  },
 ]

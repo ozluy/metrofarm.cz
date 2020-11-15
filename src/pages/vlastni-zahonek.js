@@ -14,6 +14,7 @@ import {
   ListItem,
   EndofList,
 } from 'components/Elements'
+import gardenPlan from '../../static/garden_plan_bird_view.jpg'
 import bannerSrc from '../../static/banners/banner-2.svg'
 import listSrc from '../../static/list/zahonkova_listina.png'
 import stepanSrc from '../../static/fullscreen/stepan_riha.jpg'
@@ -82,9 +83,6 @@ const RentGarden = () => {
               {formatMessage({ id: 'garden-banner-desc' })}
             </Pragraph>
 
-            <Pragraph mt="24px" color="red" textAlign="center">
-              {formatMessage({ id: 'garden-banner-desc-sub' })}
-            </Pragraph>
             <Pragraph
               cursor="pointer"
               textDecoration="underline"
@@ -114,21 +112,22 @@ const RentGarden = () => {
                 <ListItem>
                   {formatMessage({ id: 'garden-renting-how-2' })}
                 </ListItem>
-                <ListItem>
-                  {formatMessage({ id: 'garden-renting-how-3' })}
-                </ListItem>
-                <ListItem>
-                  {formatMessage({ id: 'garden-renting-how-4' })}
-                </ListItem>
-                <ListItem>
-                  {formatMessage({ id: 'garden-renting-how-5' })}
-                </ListItem>
-                <ListItem>
-                  {formatMessage({ id: 'garden-renting-how-6' })}
-                </ListItem>
               </ul>
               <EndofList m="40px 0 40px 0">
                 - {formatMessage({ id: 'garden-renting-how-7' })}
+              </EndofList>
+              <EndofList m="40px 0 40px 0">
+                - {formatMessage({ id: 'garden-renting-how-7-following' })}
+              </EndofList>
+              <EndofList m="40px 0 40px 0">
+                - {formatMessage({ id: 'garden-renting-how-7-following-2' })}
+              </EndofList>
+              <EndofList>
+                <a href={gardenPlan} target="_blank" rel="noopener noreferrer">
+                  {formatMessage({
+                    id: 'garden-renting-plan-map',
+                  })}
+                </a>
               </EndofList>
               <EndofList
                 mb="70px"

@@ -64,6 +64,6 @@ export default [
   },
   {
     id: 'vision-action',
-    defaultMessage: 'Přidejte se do toho s námi!',
+    defaultMessage: 'Přidejte se!',
   },
 ]

@@ -2,7 +2,7 @@ import React from 'react'
 import styled, { css } from 'styled-components'
 import Container from 'components/Container'
 import { Flex, Img, Span, Anchor, H1 } from 'components/Elements'
-import mapSrc from '../../../static/footer/metrofarm_on_map.jpg'
+import mapSrc from '../../../static/footer/metrofarm_on_map.png'
 import euSrc from '../../../static/footer/eu-logo.jpg'
 import blueboardSrc from '../../../static/footer/blueboard-logo.png'
 
@@ -59,7 +59,7 @@ const Footer = () => {
       <Container>
         <EnhancedFlex>
           <CustomSpan>
-            Železničářů 190, Praha 7, 170 00
+            Císařský ostrov, Praha 7, 170 00
             <br />
             <br />
             {intl.formatMessage({ id: 'footer-contact-person' })}:
@@ -70,6 +70,10 @@ const Footer = () => {
             stepan.riha@metrofarm.cz
             <br />
             +420 725 307 598
+            <br />
+            <br />
+            <br />
+            {intl.formatMessage({ id: 'footer-bank-no' })}: 270228304/0300
             <br />
             <br />
             <br />
@@ -111,7 +115,11 @@ const Footer = () => {
               display="inline-flex"
               href="https://www.instagram.com/metrofarma/"
             >
-              <Img alt="MetroFarm on Instagram" src={instagramSrc} width="45px" />
+              <Img
+                alt="MetroFarm on Instagram"
+                src={instagramSrc}
+                width="45px"
+              />
               <Span m="20px">@metrofarma</Span>
             </Anchor>
             <br />
@@ -126,23 +134,11 @@ const Footer = () => {
               <Img alt="Metrofarm on Facebook" src={facebookSrc} width="45px" />
               <Span m="20px">MetroFarm</Span>
             </Anchor>
-            <br />
-            <Anchor
-              rel="noreferrer noopener"
-              target="_blank"
-              title="Volnočasové centrum Holešovice on Facebook"
-              alignItems="center"
-              display="inline-flex"
-              href="https://www.facebook.com/volnocasholesovice/"
-            >
-              <Img alt="Volnočasové centrum Holešovice on Facebook" src={facebookSrc} width="45px" />
-              <Span m="20px">Volnočasové centrum Holešovice</Span>
-            </Anchor>
           </CustomSpan>
           <Anchor
             id="map-wrapper"
             title="Open on Mapy.cz"
-            href="https://en.mapy.cz/s/jurapukela"
+            href="https://mapy.cz/s/cazebujemo"
             target="_blank"
             rel="noreferrer noopener"
             target="_blank"

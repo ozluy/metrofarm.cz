@@ -23,4 +23,8 @@ export default [
     id: 'footer-partners',
     defaultMessage: 'Partners',
   },
+  {
+    id: 'footer-bank-no',
+    defaultMessage: 'Bank Account Number',
+  },
 ]

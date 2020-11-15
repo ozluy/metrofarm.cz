@@ -5,11 +5,6 @@ export default [
     defaultMessage:
       'We have plenty of space and we welcome total beginners as well as experienced farmers.',
   },
-  {
-    id: 'garden-banner-desc-sub',
-    defaultMessage:
-      'We will update the membership conditions for 2021 in the near future.',
-  },
   { id: 'garden-banner-action', defaultMessage: 'Join in!' },
   { id: 'garden-renting', defaultMessage: 'Your own garden bed' },
   {
@@ -25,29 +20,24 @@ export default [
   },
   { id: 'garden-renting-how-2', defaultMessage: 'Gardening tools.' },
   {
-    id: 'garden-renting-how-3',
-    defaultMessage: 'Water for watering but not for wasting.',
-  },
-  {
-    id: 'garden-renting-how-4',
-    defaultMessage:
-      'Compost, manure, chips, wood and building material to fertilize and embellish your garden beds.',
-  },
-  {
-    id: 'garden-renting-how-5',
-    defaultMessage: 'Car park for those who don´t leave the car at home.',
-  },
-  {
-    id: 'garden-renting-how-6',
-    defaultMessage: '3-hectare fenced meadow to play around.',
-  },
-  {
     id: 'garden-renting-how-7',
-    defaultMessage: 'Membership fee for 2020 is CZK 1.300.',
+    defaultMessage: 'Membership fee for 2021 is CZK 1.300.',
+  },
+  {
+    id: 'garden-renting-how-7-following',
+    defaultMessage: 'So far, we are taking water for watering from the nearby Vltava. All gardeners who are interested in water are involved in bringing it. Bringing water is a fun, useful, introductory and especially summer activity :-)',
+  },
+  {
+    id: 'garden-renting-how-7-following-2',
+    defaultMessage: 'We compost in bulk in the garden. Compost is an invaluable aid in fertilizing our flower beds. We compost mainly leaves and grass from Stromovka, horse manure from our neighbors and sometimes some bio waste from our gardens and our households.',
   },
   { id: 'garden-renting-action', defaultMessage: 'I want to own garden bed' },
   {
     id: 'garden-renting-contact',
     defaultMessage: 'For more info please contact',
+  },
+  {
+    id: 'garden-renting-plan-map',
+    defaultMessage: 'Garden plan sketch',
   },
 ]

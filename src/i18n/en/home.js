@@ -6,7 +6,7 @@ export default [
   },
   {
     id: 'home-banner-text-sub',
-    defaultMessage: 'Until 31.10.2020, we must vacate our current location at the Bubny railway station. We move the entire garden and its animal inhabitants to Císařský Ostrov (Císařský Island). We are already looking forward to the new season in a new place.'
+    defaultMessage: 'We are still building a garden. We will be happy if you can be involved in this not only creative but also time consuming process.'
   },
   {
     id: 'home-banner-link',
@@ -71,21 +71,7 @@ export default [
       'You can help us take care of animals, the common garden beds or carry out your own project. We have lots of space for lots of ideas.',
   },
   { id: 'home-how-to-get-involved-action', defaultMessage: 'More info' },
-  { id: 'home-dont-miss', defaultMessage: 'Do not miss!' },
-  {
-    id: 'home-dont-miss-desc-1',
-    defaultMessage:
-      'Sanitary facilities are situated in the near main building or next to our car park.',
-  },
-  {
-    id: 'home-dont-miss-desc-2',
-    defaultMessage: `The main building of the <a target='_blank' rel='noreferrer noopener' href='https://www.facebook.com/volnocasholesovice/'>Volnočasové centrum Holešovice</a> (Leisure Centre Holešovice) also invites you to enjoy its club bar equipped with alcoholic and non-alcoholic beverages, open every day from 3:15 PM.`,
-  },
-  {
-    id: 'home-dont-miss-desc-3',
-    defaultMessage:
-      'The garden is still being built. We will be happy if you join us in this creative but also meeting process.',
-  },
+ 
   {
     id: 'home-gallery',
     defaultMessage: 'Photo gallery',

@@ -2,11 +2,11 @@ export default [
   {
     id: 'home-banner-text',
     defaultMessage:
-      'Vítejte na stránkách komunitní zahrady Metro Farm. Na naší zahradě se snažíme nejen pěstovat, kompostovat, recyklovat a udržitelně spravovat náš kousek země, ale také zde chováme drobné hospodářské zvířectvo. Místa máme dost a vítáni jsou jak úplní začátečníci, tak ostřílení zemědělci.',
+      'Vítejte na stránkách komunitní zahrady MetroFarm. Na naší zahradě se snažíme nejen pěstovat, kompostovat, recyklovat a udržitelně spravovat náš kousek země, ale také zde chováme drobné hospodářské zvířectvo. Místa máme dost a vítáni jsou jak úplní začátečníci, tak ostřílení zemědělci.',
   },
   {
     id: 'home-banner-text-sub',
-    defaultMessage: 'Do 31.10. 2020 musíme vyklidit naše současné místo u nádraží Bubny. Celou zahradu i s jejími zvířecími obyvateli přesouváme na Císařský ostrov. Již se těšíme na novou sezónu na novém místě.'
+    defaultMessage: 'Zahradu stále budujeme. Budeme rádi, pokud se do tohoto nejen tvůrčího, ale i seznamovacího procesu více či méně zapojíte.'
   },
   {
     id: 'home-banner-link',
@@ -67,21 +67,6 @@ export default [
       'Můžete s námi například pečovat o zvířata, starat se o společné záhony nebo si zde realizovat vlastní projekt. Místa máme dost.',
   },
   { id: 'home-how-to-get-involved-action', defaultMessage: 'Více' },
-  { id: 'home-dont-miss', defaultMessage: 'Nepřehlédněte' },
-  {
-    id: 'home-dont-miss-desc-1',
-    defaultMessage:
-      'Sociální zázemí máme v blízké hlavní budově nebo u našeho parkoviště.',
-  },
-  {
-    id: 'home-dont-miss-desc-2',
-    defaultMessage: `Hlavní budova <a target='_blank' rel='noreferrer noopener' href='https://www.facebook.com/volnocasholesovice/'>Volnočasového centra Holešovice</a> Vás také láká na svůj klubový bar zásobený nealko i alko nápoji otevřený každý den od 15:15.`,
-  },
-  {
-    id: 'home-dont-miss-desc-3',
-    defaultMessage:
-      'Zahradu stále budujeme. Budeme rádi, pokud se do tohoto nejen tvůrčího, ale i seznamovacího procesu více či méně zapojíte.',
-  },
   {
     id: 'home-gallery',
     defaultMessage: 'Fotogalerie',

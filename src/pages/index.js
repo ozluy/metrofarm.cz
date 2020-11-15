@@ -39,14 +39,14 @@ const offerList = formatMessage => [
     img: home2Src,
     bg: 'green',
   },
-  {
-    title: formatMessage({ id: 'home-adopt-animal' }),
-    desc: formatMessage({ id: 'home-adopt-animal-desc' }),
-    buttonText: formatMessage({ id: 'home-adopt-animal-action' }),
-    buttonAction: () => navigate('/adopte-koz-a-ovci/', { replace: true }),
-    img: home3Src,
-    bg: 'brown',
-  },
+  // {
+  //   title: formatMessage({ id: 'home-adopt-animal' }),
+  //   desc: formatMessage({ id: 'home-adopt-animal-desc' }),
+  //   buttonText: formatMessage({ id: 'home-adopt-animal-action' }),
+  //   buttonAction: () => navigate('/adopte-koz-a-ovci/', { replace: true }),
+  //   img: home3Src,
+  //   bg: 'brown',
+  // },
   {
     title: formatMessage({ id: 'home-priciple-and-goal' }),
     desc: formatMessage({ id: 'home-priciple-and-goal-desc' }),
@@ -171,7 +171,7 @@ const Home = () => {
           <Pragraph m="0 auto" maxWidth="1440px" textAlign="center">
             {formatMessage({ id: 'home-banner-text' })}
           </Pragraph>
-          <Pragraph m="24px auto 0 auto" maxWidth="1440px" textAlign="center" color="red">
+          <Pragraph m="24px auto 0 auto" maxWidth="1440px" textAlign="center">
             {formatMessage({ id: 'home-banner-text-sub' })}
           </Pragraph>
           <Pragraph
@@ -216,33 +216,6 @@ const Home = () => {
           </MetroOffer>
         )
       )}
-      <Container>
-        <Section>
-          <Flex
-            m="0 auto"
-            maxWidth="1024px"
-            textAlign="center"
-            alignItems="center"
-            flexDirection="column"
-          >
-            <H1>{formatMessage({ id: 'home-dont-miss' })}</H1>
-
-            <Pragraph>
-              {formatMessage({ id: 'home-dont-miss-desc-1' })}
-            </Pragraph>
-            <Pragraph
-              dangerouslySetInnerHTML={{
-                __html: formatMessage({
-                  id: 'home-dont-miss-desc-2',
-                }),
-              }}
-            />
-            <Pragraph>
-              {formatMessage({ id: 'home-dont-miss-desc-3' })}
-            </Pragraph>
-          </Flex>
-        </Section>
-      </Container>
     </>
   )
 }
