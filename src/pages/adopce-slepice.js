@@ -58,6 +58,9 @@ const AdopChicken = () => {
             m=" 0 auto"
           >
             <H1 textAlign="center">{formatMessage({ id: 'hen-banner' })}</H1>
+            <Pragraph textAlign="center" color="red">
+              {formatMessage({ id: 'hen-banner-desc-0' })}
+            </Pragraph>
             <Pragraph textAlign="center">
               {formatMessage({ id: 'hen-banner-desc-1' })}
             </Pragraph>

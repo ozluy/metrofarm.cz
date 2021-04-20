@@ -73,6 +73,7 @@ const theme = {
   },
   colors: {
     white: '#ffffff',
+    disabled: '#cccccc',
     black: '#000000',
     brown: '#6A4B37',
     green: '#009064',

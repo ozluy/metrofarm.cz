@@ -9,6 +9,11 @@ export default [
       'Naše zahrada a hospodářství se stále budují a vylepšují a náš projekt stále roste. Možností, jak se umazat, zpotit a užít si pražské farmářské dobrodružství, je mnoho. Společně se staráme o zvířata, pracujeme na našem produkčním políčku, zkrášlujeme společné prostory. Každý dobrovolník je vítán.',
   },
   {
+    id: 'involve-desc-warning',
+    defaultMessage:
+      'Pro rok 2021 jsou již ale všechny slepice a individuální záhonky zarezervovány.',
+  },
+  {
     id: 'involve-link',
     defaultMessage:
       'Můžete si u nás samozřejmě také vytvořit vlastní záhon nebo například adoptovat slepici.',

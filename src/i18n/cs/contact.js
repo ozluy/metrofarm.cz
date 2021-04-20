@@ -4,6 +4,10 @@ export default [
     defaultMessage: 'Kontaktní formulář',
   },
   {
+    id: 'contact-desc',
+    defaultMessage: 'Pro rok 2021 jsou již bohužel všechny slepice a individuální záhonky zamluveny.',
+  },
+  {
     id: 'contact-interest',
     defaultMessage: 'Mám zájem o...',
   },
@@ -22,6 +26,10 @@ export default [
   {
     id: 'contact-interest-4',
     defaultMessage: 'Adopce ovcí',
+  },
+  {
+    id: 'contact-interest-5',
+    defaultMessage: 'Jiné',
   },
 
   {

@@ -3,7 +3,7 @@ export default [
   {
     id: 'garden-banner-desc',
     defaultMessage:
-      'Místa máme dost a vítáni jsou jak úplní začátečníci, tak ostřílení zemědělci.',
+      'Pro rok 2021 již máme kapacitu individuálních záhonků naplněnu.',
   },
   { id: 'garden-banner-action', defaultMessage: 'Přidejte se!' },
   { id: 'garden-renting', defaultMessage: 'Vlastní záhonek' },
@@ -33,7 +33,7 @@ export default [
     defaultMessage:
       'Na zahradě ve velkém kompostujeme. Kompost je neocenitelný pomocník při zúrodňování našich záhonků. Kompostujeme hlavně listí a trávu ze Stromovky, koňský hnůj od našich sousedů a občas nějaký bio odpad z našich zahrádek a z našich domácností.',
   },
-  { id: 'garden-renting-action', defaultMessage: 'Chci záhonkovou listinu' },
+  { id: 'garden-renting-action', defaultMessage: 'Mám zájem o záhonek' },
   {
     id: 'garden-renting-contact',
     defaultMessage: 'Pro více informací kontaktujte',

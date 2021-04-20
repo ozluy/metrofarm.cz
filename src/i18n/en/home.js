@@ -2,7 +2,7 @@ export default [
   {
     id: 'home-banner-text',
     defaultMessage:
-      'Welcome to the Metro Farm community garden website. In our garden, we not only grow, compost, and recycle in order to sustainably manage our land, but we also breed small livestock. We have lots of space and we welcome total beginners, as well as, experienced farmers.',
+      'Welcome to the Metro Farm community garden website. In our garden, we not only grow, compost, and recycle in order to sustainably manage our land, but we also breed small livestock. For the year 2021, we already have reached the full capacity of garden beds.',
   },
   {
     id: 'home-banner-text-sub',
@@ -38,7 +38,7 @@ export default [
   {
     id: 'home-rent-garden-desc',
     defaultMessage:
-      'We have tons of space and we welcome total beginners as well as experienced farmers.',
+      'For the year 2021, we already have reached the full capacity of garden beds.',
   },
   {
     id: 'home-rent-garden-action',

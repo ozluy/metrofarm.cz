@@ -4,6 +4,10 @@ export default [
     defaultMessage: 'Contact Form',
   },
   {
+    id: 'contact-desc',
+    defaultMessage: 'For the year 2021, unfortunately all hens are adopted and all garden beds are already reserved.',
+  },
+  {
     id: 'contact-interest',
     defaultMessage: 'I am interested in...',
   },
@@ -22,6 +26,11 @@ export default [
   {
     id: 'contact-interest-4',
     defaultMessage: 'Adoption of a goat',
+  },
+
+  {
+    id: 'contact-interest-5',
+    defaultMessage: 'Other',
   },
 
   {

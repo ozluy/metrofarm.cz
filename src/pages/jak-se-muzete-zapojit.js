@@ -36,20 +36,6 @@ const listOfOptions = formatMessage => [
     link: '/vlastni-zahonek/',
     buttonText: formatMessage({ id: 'involve-garden-action' }),
   },
-  // {
-  //   title: formatMessage({ id: 'involve-goat' }),
-  //   desc: formatMessage({ id: 'involve-adopt' }),
-  //   img: listSrcKoza,
-  //   link: '/adopte-koz-a-ovci/',
-  //   buttonText: formatMessage({ id: 'involve-goat-action' }),
-  // },
-  // {
-  //   title: formatMessage({ id: 'involve-sheep' }),
-  //   desc: formatMessage({ id: 'involve-adopt' }),
-  //   img: listSrcOvce,
-  //   link: '/adopte-koz-a-ovci/',
-  //   buttonText: formatMessage({ id: 'involve-sheep-action' }),
-  // },
 ]
 
 const CustomFlex = styled(Flex)`
@@ -97,6 +83,7 @@ const HowItWorks = () => {
             m=" 0 auto"
           >
             <H1 textAlign="center">{formatMessage({ id: 'involve-title' })}</H1>
+
             <Pragraph textAlign="center">
               {formatMessage({ id: 'involve-desc' })}
             </Pragraph>
@@ -113,6 +100,10 @@ const HowItWorks = () => {
               }
             >
               {formatMessage({ id: 'involve-link' })}
+            </Pragraph>
+
+            <Pragraph color="red" textAlign="center">
+              {formatMessage({ id: 'involve-desc-warning' })}
             </Pragraph>
           </Flex>
         </Container>

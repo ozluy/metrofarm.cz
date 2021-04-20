@@ -138,7 +138,7 @@ const Footer = () => {
           <Anchor
             id="map-wrapper"
             title="Open on Mapy.cz"
-            href="https://mapy.cz/s/cazebujemo"
+            href="https://mapy.cz/s/cujakezumu"
             target="_blank"
             rel="noreferrer noopener"
             target="_blank"

@@ -1,6 +1,10 @@
 export default [
   { id: 'hen-banner', defaultMessage: 'Hen Adoption' },
   {
+    id: 'hen-banner-desc-0',
+    defaultMessage: 'For the year 2021, unfortunately all hens are adopted.',
+  },
+  {
     id: 'hen-banner-desc-1',
     defaultMessage:
       'We saved most of our hens from battery cages and we give them a new life. The girls romp around in the fresh air, bask in the sunshine, dust bathe in their hollows, shelter from the rain and wrestle over the freshly dug out worms. They have more space and freedom so they can easily express their natural behaviour. They give us eggs and we keep each other company.',

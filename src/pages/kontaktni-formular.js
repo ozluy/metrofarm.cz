@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import styled, { css } from 'styled-components'
-import { Flex, Section, Div, H1 } from 'components/Elements'
+import { Flex, Section, Div, H1, Pragraph } from 'components/Elements'
 import Seo from 'components/Seo'
 import Button from 'components/Button'
 import { navigate } from 'gatsby'
@@ -104,6 +104,24 @@ const Radio = styled.input`
       color: ${({ theme }) => theme.colors.green};
     }
   }
+
+  ${({ disabled }) =>
+    disabled &&
+    css`
+    cursor: not-allowed;
+       ~ {
+        ${RadioCircle} {
+          border: solid 5px ${({ theme }) => theme.colors.disabled};
+          cursor: not-allowed;
+        }
+      }
+       ~ {
+        ${RadioLabel} {
+          color: ${({ theme }) => theme.colors.disabled};
+          cursor: not-allowed;
+        }
+      }
+    `};
 `
 
 const TextArea = styled.textarea`
@@ -112,10 +130,19 @@ const TextArea = styled.textarea`
 `
 
 const choices = formatMessage => [
-  { id: 'hen', title: formatMessage({ id: 'contact-interest-1' }) },
-  { id: 'garden', title: formatMessage({ id: 'contact-interest-2' }) },
-  { id: 'sheep', title: formatMessage({ id: 'contact-interest-3' }) },
-  { id: 'goat', title: formatMessage({ id: 'contact-interest-4' }) },
+  {
+    id: 'hen',
+    title: formatMessage({ id: 'contact-interest-1' }),
+    disabled: true,
+  },
+  {
+    id: 'garden',
+    title: formatMessage({ id: 'contact-interest-2' }),
+    disabled: true,
+  },
+  // { id: 'sheep', title: formatMessage({ id: 'contact-interest-3' }) },
+  // { id: 'goat', title: formatMessage({ id: 'contact-interest-4' }) },
+  { id: 'goat', title: formatMessage({ id: 'contact-interest-5' }) },
 ]
 
 const ContactForm = () => {
@@ -163,15 +190,19 @@ const ContactForm = () => {
           }}
         >
           <H1 textAlign="center">{formatMessage({ id: 'contact-title' })}</H1>
+          <Pragraph color="red" textAlign="center">
+            {formatMessage({ id: 'contact-desc' })}
+          </Pragraph>
 
           <FormItem>
             <Title>{formatMessage({ id: 'contact-interest' })}</Title>
-            {choices(formatMessage).map(({ title, id }) => {
+            {choices(formatMessage).map(({ title, id, disabled }) => {
               const alreadySelected = interestedIn.find(item => item.id === id)
 
               return (
                 <RadioWrapper key={title}>
                   <Radio
+                    disabled={disabled}
                     checked={alreadySelected}
                     onChange={() => onSelect(id, title, alreadySelected)}
                     id={id}

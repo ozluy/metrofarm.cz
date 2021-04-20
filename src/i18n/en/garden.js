@@ -3,7 +3,7 @@ export default [
   {
     id: 'garden-banner-desc',
     defaultMessage:
-      'We have plenty of space and we welcome total beginners as well as experienced farmers.',
+      'For the year 2021, we already have reached the full capacity of garden beds.',
   },
   { id: 'garden-banner-action', defaultMessage: 'Join in!' },
   { id: 'garden-renting', defaultMessage: 'Your own garden bed' },

@@ -79,7 +79,7 @@ const RentGarden = () => {
             m=" 0 auto"
           >
             <H1 textAlign="center">{formatMessage({ id: 'garden-banner' })}</H1>
-            <Pragraph textAlign="center">
+            <Pragraph color="red" textAlign="center">
               {formatMessage({ id: 'garden-banner-desc' })}
             </Pragraph>
 
