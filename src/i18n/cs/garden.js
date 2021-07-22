@@ -3,7 +3,8 @@ export default [
   {
     id: 'garden-banner-desc',
     defaultMessage:
-      'Pro rok 2021 již máme kapacitu individuálních záhonků naplněnu.',
+      'Místa máme dost a vítáni jsou jak úplní začátečníci, tak ostřílení zemědělci.',
+    // 'Pro rok 2021 již máme kapacitu individuálních záhonků naplněnu.',
   },
   { id: 'garden-banner-action', defaultMessage: 'Přidejte se!' },
   { id: 'garden-renting', defaultMessage: 'Vlastní záhonek' },

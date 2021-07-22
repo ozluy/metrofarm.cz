@@ -102,9 +102,9 @@ const HowItWorks = () => {
               {formatMessage({ id: 'involve-link' })}
             </Pragraph>
 
-            <Pragraph color="red" textAlign="center">
+            {/* <Pragraph color="red" textAlign="center">
               {formatMessage({ id: 'involve-desc-warning' })}
-            </Pragraph>
+            </Pragraph> */}
           </Flex>
         </Container>
       </Section>

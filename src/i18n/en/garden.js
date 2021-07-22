@@ -3,7 +3,8 @@ export default [
   {
     id: 'garden-banner-desc',
     defaultMessage:
-      'For the year 2021, we already have reached the full capacity of garden beds.',
+      'We have plenty of space and we welcome total beginners as well as experienced farmers.',
+    // 'For the year 2021, we already have reached the full capacity of garden beds.',
   },
   { id: 'garden-banner-action', defaultMessage: 'Join in!' },
   { id: 'garden-renting', defaultMessage: 'Your own garden bed' },
@@ -25,11 +26,13 @@ export default [
   },
   {
     id: 'garden-renting-how-7-following',
-    defaultMessage: 'So far, we are taking water for watering from the nearby Vltava. All gardeners who are interested in water are involved in bringing it. Bringing water is a fun, useful, introductory and especially summer activity :-)',
+    defaultMessage:
+      'So far, we are taking water for watering from the nearby Vltava. All gardeners who are interested in water are involved in bringing it. Bringing water is a fun, useful, introductory and especially summer activity :-)',
   },
   {
     id: 'garden-renting-how-7-following-2',
-    defaultMessage: 'We compost in bulk in the garden. Compost is an invaluable aid in fertilizing our flower beds. We compost mainly leaves and grass from Stromovka, horse manure from our neighbors and sometimes some bio waste from our gardens and our households.',
+    defaultMessage:
+      'We compost in bulk in the garden. Compost is an invaluable aid in fertilizing our flower beds. We compost mainly leaves and grass from Stromovka, horse manure from our neighbors and sometimes some bio waste from our gardens and our households.',
   },
   { id: 'garden-renting-action', defaultMessage: 'I want to own garden bed' },
   {

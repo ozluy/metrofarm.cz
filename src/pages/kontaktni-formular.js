@@ -133,16 +133,16 @@ const choices = formatMessage => [
   {
     id: 'hen',
     title: formatMessage({ id: 'contact-interest-1' }),
-    disabled: true,
+    disabled: false,
   },
   {
     id: 'garden',
     title: formatMessage({ id: 'contact-interest-2' }),
-    disabled: true,
+    disabled: false,
   },
   // { id: 'sheep', title: formatMessage({ id: 'contact-interest-3' }) },
   // { id: 'goat', title: formatMessage({ id: 'contact-interest-4' }) },
-  { id: 'goat', title: formatMessage({ id: 'contact-interest-5' }) },
+  // { id: 'other', title: formatMessage({ id: 'contact-interest-5' }) },
 ]
 
 const ContactForm = () => {
@@ -190,9 +190,9 @@ const ContactForm = () => {
           }}
         >
           <H1 textAlign="center">{formatMessage({ id: 'contact-title' })}</H1>
-          <Pragraph color="red" textAlign="center">
+          {/* <Pragraph color="red" textAlign="center">
             {formatMessage({ id: 'contact-desc' })}
-          </Pragraph>
+          </Pragraph> */}
 
           <FormItem>
             <Title>{formatMessage({ id: 'contact-interest' })}</Title>

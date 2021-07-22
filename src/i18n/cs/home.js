@@ -2,7 +2,7 @@ export default [
   {
     id: 'home-banner-text',
     defaultMessage:
-      'Vítejte na stránkách komunitní zahrady MetroFarm. Na naší zahradě se snažíme nejen pěstovat, kompostovat, recyklovat a udržitelně spravovat náš kousek země, ale také zde chováme drobné hospodářské zvířectvo. Pro rok 2021 již máme kapacitu individuálních záhonků naplněnu.',
+      'Vítejte na stránkách komunitní zahrady MetroFarm. Místa máme dost a vítáni jsou jak úplní začátečníci, tak ostřílení zemědělci.',
   },
   {
     id: 'home-banner-text-sub',
@@ -37,7 +37,7 @@ export default [
   {
     id: 'home-rent-garden-desc',
     defaultMessage:
-      'Pro rok 2021 již máme kapacitu individuálních záhonků naplněnu.',
+      'Místa máme dost a vítáni jsou jak úplní začátečníci, tak ostřílení zemědělci.',
   },
   {
     id: 'home-rent-garden-action',
