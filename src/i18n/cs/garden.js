@@ -17,12 +17,12 @@ export default [
   {
     id: 'garden-renting-how-1',
     defaultMessage:
-      '5 m2 zahradníkem nedotčeného pěstebního prostoru, který čeká na ukázku Vašich zahradnických dovedností.',
+       '5 m2 zahradníkem nedotčeného pěstebního prostoru, který čeká na ukázku Vašich zahradnických dovedností.',
   },
   { id: 'garden-renting-how-2', defaultMessage: 'Zahradnické nářadí.' },
   {
     id: 'garden-renting-how-7',
-    defaultMessage: 'Členský příspěvek na rok 2021 je 1 300 Kč.',
+    defaultMessage: 'Členský příspěvek na rok 2022 je 2 500 Kč.',
   },
   {
     id: 'garden-renting-how-7-following',

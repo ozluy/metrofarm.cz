@@ -22,7 +22,7 @@ export default [
   { id: 'garden-renting-how-2', defaultMessage: 'Gardening tools.' },
   {
     id: 'garden-renting-how-7',
-    defaultMessage: 'Membership fee for 2021 is CZK 1.300.',
+    defaultMessage: 'Membership fee for 2022 is CZK 2.500.',
   },
   {
     id: 'garden-renting-how-7-following',
