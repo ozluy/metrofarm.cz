@@ -2,7 +2,7 @@ export default [
   { id: 'hen-banner', defaultMessage: 'Hen Adoption' },
   {
     id: 'hen-banner-desc-0',
-    defaultMessage: 'For the year 2021, unfortunately all hens are adopted.',
+    defaultMessage: 'At the moment all hens are happily adopted.',
   },
   {
     id: 'hen-banner-desc-1',

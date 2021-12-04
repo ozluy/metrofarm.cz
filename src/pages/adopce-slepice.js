@@ -58,9 +58,9 @@ const AdopChicken = () => {
             m=" 0 auto"
           >
             <H1 textAlign="center">{formatMessage({ id: 'hen-banner' })}</H1>
-            {/* <Pragraph textAlign="center" color="red">
+            <Pragraph textAlign="center" color="red">
               {formatMessage({ id: 'hen-banner-desc-0' })}
-            </Pragraph> */}
+            </Pragraph>
             <Pragraph textAlign="center">
               {formatMessage({ id: 'hen-banner-desc-1' })}
             </Pragraph>
@@ -131,9 +131,9 @@ const AdopChicken = () => {
                   <Div mt="20px">Štěpán Říha</Div>
                   <Div>+420 725 307 598</Div>
                   <Div>stepan.riha@metrofarm.cz</Div>
-                  <Div mt="20px">Vendula Procházková</Div>
+                  {/* <Div mt="20px">Vendula Procházková</Div>
                   <Div>+420 737 481 044</Div>
-                  <Div>vendula.prochazkova@email.cz</Div>
+                  <Div>vendula.prochazkova@email.cz</Div> */}
                 </Span>
               </Div>
             </Div>

@@ -5,6 +5,7 @@ import { Flex, Img, Span, Anchor, H1 } from 'components/Elements'
 import mapSrc from '../../../static/footer/metrofarm_on_map.png'
 import euSrc from '../../../static/footer/logo_praha7.png'
 import blueboardSrc from '../../../static/footer/blueboard-logo.png'
+import kokozaSrc from '../../../static/footer/kokoza_logo.png'
 
 import facebookSrc from '../../../static/footer/social/facebook.png'
 import instagramSrc from '../../../static/footer/social/insta.png'
@@ -101,6 +102,9 @@ const Footer = () => {
             <br />
             <br />
             <Img width="212px" alt="EU logo" src={euSrc} />
+            <br />
+            <br />
+            <Img width="212px" alt="Kokoza logo" src={kokozaSrc} />
             <br />
             <br />
             <Img width="212px" alt="Blue Board Logo" src={blueboardSrc} />

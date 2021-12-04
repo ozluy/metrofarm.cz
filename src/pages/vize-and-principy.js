@@ -13,7 +13,7 @@ import {
   Span,
 } from 'components/Elements'
 import bannerSrc from '../../static/banners/banner-3.svg'
-import babySrc from '../../static/fullscreen/garden-king.png'
+import babySrc from '../../static/fullscreen/community.jpg'
 import beeSrc from '../../static/fullscreen/bees.jpg'
 import styled, { css } from 'styled-components'
 import Seo from 'components/Seo'

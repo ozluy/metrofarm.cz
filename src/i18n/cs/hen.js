@@ -2,7 +2,7 @@ export default [
   { id: 'hen-banner', defaultMessage: 'Adopce slepice' },
   {
     id: 'hen-banner-desc-0',
-    defaultMessage: 'Pro rok 2021 jsou již všechny slepice adoptovány.',
+    defaultMessage: 'V tuto chvíli jsou všechny slepice šťastně adoptovány.',
   },
   {
     id: 'hen-banner-desc-1',

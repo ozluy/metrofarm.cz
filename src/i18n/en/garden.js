@@ -16,14 +16,66 @@ export default [
   { id: 'garden-renting-how', defaultMessage: 'Basic membership includes' },
   {
     id: 'garden-renting-how-1',
-    defaultMessage:
-      '5 m2 of growing space untouched by a gardener waiting to showcase your gardening skills.',
+    defaultMessage: 'Approx. 5 m2 of growing space',
   },
-  { id: 'garden-renting-how-2', defaultMessage: 'Gardening tools.' },
+  {id: 'garden-renting-how-2', defaultMessage: 'Garden tools.' },
+
+  {
+    id: 'garden-renting-how-3',
+    defaultMessage: 'Horticultural workshops throughout 2022',
+  },
+
+  {
+    id: 'garden-renting-how-4',
+    defaultMessage: `Obligation to work 10 hours a year for the garden while working on the production field, maintaining our community garden or activities that are closest to your heart and beneficial to the garden.
+When working on the production field, you will not only gain new gardening skills, but you will also be rewarded with our farm boxes or seedlings for your flower bed.`
+  },
+  {
+    id: 'garden-renting-how-5',
+    defaultMessage: `The obligation to keep the space around your flower bed up to a distance of 30 cm and to mow it at least 3 times a year.`
+  },
+  {
+    id: 'garden-renting-how-6',
+    defaultMessage:
+      `<a style="color:white; text-decoration:underline" href="/jak-se-muzete-znojit/#how-to"> Flower bed (available on request) </a>`,
+  },
+
   {
     id: 'garden-renting-how-7',
-    defaultMessage: 'Membership fee for 2022 is CZK 2.500.',
+    defaultMessage: `The membership fee for 2022 is CZK 2,500.
+    (In the case of a 10 m2 flowerbed, CZK 4,000) `,
   },
+ 
+  {id: 'garden-renting-how2', defaultMessage: 'Membership 2022 - Unbound'},
+  {
+    id: 'garden-renting-how2-1',
+    defaultMessage: 'Approx. 5 m2 of growing space',
+  },
+  {
+    id: 'garden-renting-how2-2',
+    defaultMessage: 'Garden tools',
+  },
+  {
+    id: 'garden-renting-how2-3',
+    defaultMessage:
+      'The obligation to keep the area around its flower bed within a distance of 30 cm clean and to mow it at least 3 times a year.',
+  },
+  {
+    id: 'garden-renting-how2-4',
+    defaultMessage:
+      '<a style="color:white; text-decoration:underline" href="/jak-se-muzete-znojit/#how-to"> Get a list of inquiries on request </a>',
+  },
+  {
+    id: 'garden-renting-how2-5',
+    defaultMessage: `The membership fee for 2022 is CZK 4,000
+    (In the case of a 10 m2 flowerbed, CZK 5,500) `,
+  },
+  {
+    id: 'garden-google-drive',
+    defaultMessage:
+      '<a href="https://drive.google.com/file/d/1mcm9uJ2JaVBfVYk3wMdKMRrd0y8ghMr9/view?usp=sharing" target="_blank" rel="no-opener no-referrer">More about the production field, workshops and involvement opportunities here</a>',
+  },
+ 
   {
     id: 'garden-renting-how-7-following',
     defaultMessage:

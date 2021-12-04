@@ -1,12 +1,13 @@
-import img0 from '../../../static/gallery/00.png'
-import img1 from '../../../static/gallery/1.png'
-import img2 from '../../../static/gallery/2.png'
-import img3 from '../../../static/gallery/3.png'
-import img4 from '../../../static/gallery/4.png'
-import img5 from '../../../static/gallery/5.png'
-import img6 from '../../../static/gallery/6.png'
-import img7 from '../../../static/gallery/7.png'
-import img8 from '../../../static/gallery/8.png'
+import img0 from '../../../static/gallery/garden_1.jpg'
+import img1 from '../../../static/gallery/garden_2.jpg'
+import img2 from '../../../static/gallery/garden_3.jpg'
+import img3 from '../../../static/gallery/garden_4.jpg'
+import img4 from '../../../static/gallery/garden_5.jpg'
+import img5 from '../../../static/gallery/garden_6.jpg'
+import img6 from '../../../static/gallery/garden_7.jpg'
+import img7 from '../../../static/gallery/garden_8.jpg'
+import img8 from '../../../static/gallery/garden_9.jpg'
+
 import img9 from '../../../static/gallery/9.png'
 import img12 from '../../../static/gallery/12.png'
 import img13 from '../../../static/gallery/13.png'
@@ -19,16 +20,20 @@ import img20 from '../../../static/gallery/20.png'
 import img21 from '../../../static/gallery/21.png'
 import img22 from '../../../static/gallery/22.png'
 import img23 from '../../../static/gallery/23.png'
-import img30 from '../../../static/gallery/30.png'
-import img31 from '../../../static/gallery/31.png'
-import img32 from '../../../static/gallery/32.png'
-import img33 from '../../../static/gallery/33.png'
-import img34 from '../../../static/gallery/34.png'
-import img35 from '../../../static/gallery/35.png'
-import img36 from '../../../static/gallery/36.png'
-import img37 from '../../../static/gallery/37.png'
-import img38 from '../../../static/gallery/38.png'
-import img39 from '../../../static/gallery/39.png'
+
+import img30 from '../../../static/gallery/community_1.jpg'
+import img31 from '../../../static/gallery/community_2.jpg'
+import img32 from '../../../static/gallery/community_3.jpg'
+import img33 from '../../../static/gallery/community_4.jpg'
+import img34 from '../../../static/gallery/community_5.jpg'
+import img35 from '../../../static/gallery/community_6.jpg'
+import img36 from '../../../static/gallery/community_7.jpg'
+import img37 from '../../../static/gallery/community_8.jpg'
+import img38 from '../../../static/gallery/community_9.jpg'
+import img39 from '../../../static/gallery/community_10.jpg'
+import img40 from '../../../static/gallery/community_11.jpg'
+import img41 from '../../../static/gallery/community_12.jpg'
+import img42 from '../../../static/gallery/community_13.jpg'
 
 export default {
   sheepandgoat: [img9, img12, img13, img14, img15, img20, img21, img22],
@@ -45,5 +50,8 @@ export default {
     img37,
     img38,
     img39,
+    img40,
+    img41,
+    img42,
   ],
 }

@@ -133,7 +133,7 @@ const choices = formatMessage => [
   {
     id: 'hen',
     title: formatMessage({ id: 'contact-interest-1' }),
-    disabled: false,
+    disabled: true,
   },
   {
     id: 'garden',
@@ -190,9 +190,9 @@ const ContactForm = () => {
           }}
         >
           <H1 textAlign="center">{formatMessage({ id: 'contact-title' })}</H1>
-          {/* <Pragraph color="red" textAlign="center">
-            {formatMessage({ id: 'contact-desc' })}
-          </Pragraph> */}
+          <Pragraph color="red" textAlign="center">
+            {formatMessage({ id: 'hen-banner-desc-0' })}
+          </Pragraph>
 
           <FormItem>
             <Title>{formatMessage({ id: 'contact-interest' })}</Title>

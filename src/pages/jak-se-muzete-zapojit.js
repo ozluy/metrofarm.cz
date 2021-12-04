@@ -1,5 +1,5 @@
-import React from 'react'
-import { navigate, replace, Link } from 'gatsby'
+import React, { useEffect } from 'react'
+import { navigate, Link } from 'gatsby'
 import Container from 'components/Container'
 import Button from 'components/Button'
 import {
@@ -69,8 +69,13 @@ const ItemWrapper = styled(Div)`
   `}
 `
 
-const HowItWorks = () => {
+const HowItWorks = ({ location }) => {
   const { formatMessage } = useIntl()
+  useEffect(() => {
+    if (location?.hash === '#how-to') {
+      document.getElementById('how-to')?.scrollIntoView({ behavior: 'smooth' })
+    }
+  }, [])
   return (
     <>
       <Seo />

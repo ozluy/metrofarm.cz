@@ -17,7 +17,7 @@ import {
 import gardenPlan from '../../static/garden_plan_bird_view.jpg'
 import bannerSrc from '../../static/banners/banner-2.svg'
 import listSrc from '../../static/list/zahonkova_listina.png'
-import stepanSrc from '../../static/fullscreen/stepan_riha.jpg'
+import stepanSrc from '../../static/fullscreen/main.jpeg'
 import styled, { css } from 'styled-components'
 import Gallery from 'components/Gallery'
 import { navigate } from 'gatsby'
@@ -112,7 +112,53 @@ const RentGarden = () => {
                 <ListItem>
                   {formatMessage({ id: 'garden-renting-how-2' })}
                 </ListItem>
+                <ListItem>
+                  {formatMessage({ id: 'garden-renting-how-3' })}
+                </ListItem>
+                <ListItem>
+                  {formatMessage({ id: 'garden-renting-how-4' })}
+                </ListItem>
+                <ListItem>
+                  {formatMessage({ id: 'garden-renting-how-5' })}
+                </ListItem>
+                <ListItem
+                  dangerouslySetInnerHTML={{
+                    __html: formatMessage({ id: 'garden-renting-how-6' }),
+                  }}
+                />
+                <ListItem>
+                  {formatMessage({ id: 'garden-renting-how-7' })}
+                </ListItem>
               </ul>
+
+              <H2>{formatMessage({ id: 'garden-renting-how2' })}:</H2>
+              <ul>
+                <ListItem>
+                  {formatMessage({ id: 'garden-renting-how2-1' })}
+                </ListItem>
+                <ListItem>
+                  {formatMessage({ id: 'garden-renting-how2-2' })}
+                </ListItem>
+                <ListItem>
+                  {formatMessage({ id: 'garden-renting-how2-3' })}
+                </ListItem>
+                <ListItem
+                  dangerouslySetInnerHTML={{
+                    __html: formatMessage({ id: 'garden-renting-how2-4' }),
+                  }}
+                />
+                <ListItem>
+                  {formatMessage({ id: 'garden-renting-how2-5' })}
+                </ListItem>
+              
+              </ul>
+
+              <EndofList
+              m="80px 0 80px 0"
+              dangerouslySetInnerHTML={{
+                    __html: formatMessage({ id: 'garden-google-drive' }),
+                  }}
+               textAlign="center" textDecoration="underline" />
               <EndofList m="40px 0 40px 0">
                 - {formatMessage({ id: 'garden-renting-how-7' })}
               </EndofList>
@@ -151,6 +197,9 @@ const RentGarden = () => {
                   <Div mt="20px">Štěpán Říha</Div>
                   <Div>+420 725 307 598</Div>
                   <Div>stepan.riha@metrofarm.cz</Div>
+                  <Div mt="20px">Vendula Donátová</Div>
+                  <Div>+420 731 873 300</Div>
+                  <Div>donatovav@gmail.com</Div>
                 </Span>
               </Div>
             </Div>
