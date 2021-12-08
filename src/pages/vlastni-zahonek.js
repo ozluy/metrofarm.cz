@@ -144,7 +144,7 @@ const RentGarden = () => {
               />
               <br />
               <br />
-              <H2>{formatMessage({ id: 'garden-renting-how2' })}:</H2>
+              <H2>{formatMessage({ id: 'garden-renting-how2' })}</H2>
               <ul>
                 <ListItem>
                   {formatMessage({ id: 'garden-renting-how2-1' })}
@@ -155,11 +155,11 @@ const RentGarden = () => {
                 <ListItem>
                   {formatMessage({ id: 'garden-renting-how2-3' })}
                 </ListItem>
-                <ListItem
+                {/* <ListItem
                   dangerouslySetInnerHTML={{
                     __html: formatMessage({ id: 'garden-renting-how2-4' }),
                   }}
-                />
+                /> */}
                 <ListItem
                   dangerouslySetInnerHTML={{
                     __html: formatMessage({ id: 'garden-renting-how-6' }),
@@ -173,7 +173,8 @@ const RentGarden = () => {
                   {formatMessage({ id: 'garden-renting-how2-5-2' })}
                 </small>
               </Pragraph>
-
+              <br />
+              <br />
               <EndofList m="40px 0 40px 0">
                 - {formatMessage({ id: 'garden-renting-how-7-following' })}
               </EndofList>
