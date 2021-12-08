@@ -126,11 +126,24 @@ const RentGarden = () => {
                     __html: formatMessage({ id: 'garden-renting-how-6' }),
                   }}
                 />
-                <ListItem>
-                  {formatMessage({ id: 'garden-renting-how-7' })}
-                </ListItem>
               </ul>
-
+              <Pragraph fontWeight="600">
+                {formatMessage({ id: 'garden-renting-how-7' })}
+                <br />
+                <small style={{ fontWeight: '400' }}>
+                  {formatMessage({ id: 'garden-renting-how-7-2' })}
+                </small>
+              </Pragraph>
+              <EndofList
+                m="80px 0 80px 0"
+                dangerouslySetInnerHTML={{
+                  __html: formatMessage({ id: 'garden-google-drive' }),
+                }}
+                textAlign="center"
+                textDecoration="underline"
+              />
+              <br />
+              <br />
               <H2>{formatMessage({ id: 'garden-renting-how2' })}:</H2>
               <ul>
                 <ListItem>
@@ -147,21 +160,20 @@ const RentGarden = () => {
                     __html: formatMessage({ id: 'garden-renting-how2-4' }),
                   }}
                 />
-                <ListItem>
-                  {formatMessage({ id: 'garden-renting-how2-5' })}
-                </ListItem>
-              
-              </ul>
-
-              <EndofList
-              m="80px 0 80px 0"
-              dangerouslySetInnerHTML={{
-                    __html: formatMessage({ id: 'garden-google-drive' }),
+                <ListItem
+                  dangerouslySetInnerHTML={{
+                    __html: formatMessage({ id: 'garden-renting-how-6' }),
                   }}
-               textAlign="center" textDecoration="underline" />
-              <EndofList m="40px 0 40px 0">
-                - {formatMessage({ id: 'garden-renting-how-7' })}
-              </EndofList>
+                />
+              </ul>
+              <Pragraph fontWeight="600">
+                {formatMessage({ id: 'garden-renting-how2-5' })}
+                <br />
+                <small style={{ fontWeight: '400' }}>
+                  {formatMessage({ id: 'garden-renting-how2-5-2' })}
+                </small>
+              </Pragraph>
+
               <EndofList m="40px 0 40px 0">
                 - {formatMessage({ id: 'garden-renting-how-7-following' })}
               </EndofList>

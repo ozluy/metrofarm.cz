@@ -104,7 +104,9 @@ const Footer = () => {
             <Img width="212px" alt="EU logo" src={euSrc} />
             <br />
             <br />
-            <Img width="212px" alt="Kokoza logo" src={kokozaSrc} />
+            <a target="_blank" rel="noreferrer noopener" href="https://kokoza.cz/">
+              <Img width="212px" alt="Kokoza logo" src={kokozaSrc} />
+            </a>
             <br />
             <br />
             <Img width="212px" alt="Blue Board Logo" src={blueboardSrc} />

@@ -11,6 +11,7 @@ import {
   flexbox,
   background,
   position,
+  fontWeight,
 } from 'styled-system'
 
 const shared = css`
@@ -80,7 +81,7 @@ export const H2 = styled.h2`
 export const Pragraph = styled.p`
   ${({ theme }) => theme.font.medium};
   margin: 16px 0 ${shared};
-
+  ${fontWeight}
   a {
     color: inherit;
     font-size: inherit;
