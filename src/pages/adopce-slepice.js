@@ -82,7 +82,7 @@ const AdopChicken = () => {
         </Container>
       </Section>
       <Iframe
-        src="https://www.youtube.com/embed/r1ncaNxIc-4"
+        src="https://www.youtube.com/embed/d7QkaKW91Cg"
         frameborder="0"
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen
@@ -141,6 +141,12 @@ const AdopChicken = () => {
           </CustomFlex>
         </Container>
       </Section>
+      <Iframe
+        src="https://www.youtube.com/embed/r1ncaNxIc-4"
+        frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></Iframe>
       <Gallery listName="chicken" />
     </>
   )

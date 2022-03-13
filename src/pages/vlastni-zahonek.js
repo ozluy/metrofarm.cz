@@ -65,6 +65,13 @@ export const Banner = styled(Div)`
   `}
 `
 
+const Iframe = styled.iframe`
+  width: 100%;
+  height: calc(var(--main-width) * var(--aspect-ratio));
+  vertical-align: top;
+  border: none;
+`
+
 const RentGarden = () => {
   const { formatMessage } = useIntl()
   return (
@@ -216,10 +223,17 @@ const RentGarden = () => {
                 </Span>
               </Div>
             </Div>
+
             <Img height={{ lg: 800, md: 500 }} src={listSrc} />
           </CustomFlex>
         </Container>
       </Section>
+      <Iframe
+        src="https://www.youtube.com/embed/7bciRvg5Ocg"
+        frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></Iframe>
       <Img width="100%" src={stepanSrc} />
       <Gallery />
     </>
