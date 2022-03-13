@@ -17,7 +17,6 @@ import {
 import gardenPlan from '../../static/garden_plan_bird_view.jpg'
 import bannerSrc from '../../static/banners/banner-2.svg'
 import listSrc from '../../static/list/zahonkova_listina.png'
-import stepanSrc from '../../static/fullscreen/main.jpeg'
 import styled, { css } from 'styled-components'
 import Gallery from 'components/Gallery'
 import { navigate } from 'gatsby'
@@ -234,7 +233,6 @@ const RentGarden = () => {
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen
       ></Iframe>
-      <Img width="100%" src={stepanSrc} />
       <Gallery />
     </>
   )

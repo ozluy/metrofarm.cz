@@ -15,7 +15,6 @@ import {
   EndofList,
 } from 'components/Elements'
 import listSrc from '../../static/list/adopcni_listina_slepice.png'
-import chickenSrc from '../../static/fullscreen/chicken.png'
 import Gallery from 'components/Gallery'
 
 import styled, { css } from 'styled-components'
@@ -141,12 +140,6 @@ const AdopChicken = () => {
           </CustomFlex>
         </Container>
       </Section>
-      <Iframe
-        src="https://www.youtube.com/embed/r1ncaNxIc-4"
-        frameborder="0"
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      ></Iframe>
       <Gallery listName="chicken" />
     </>
   )
